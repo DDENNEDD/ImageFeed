@@ -99,6 +99,8 @@
 		BF12F76D29798B4500DDF1DA /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				BF936B94297F61C800C2124F /* Resources */,
+				BF936B93297F61B500C2124F /* Presentation */,
 				BF12F76E29798B4500DDF1DA /* AppDelegate.swift */,
 				BF12F77029798B4500DDF1DA /* SceneDelegate.swift */,
 				BF12F77229798B4500DDF1DA /* ViewController.swift */,
@@ -125,6 +127,20 @@
 				BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */,
 			);
 			path = ImageFeedUITests;
+			sourceTree = "<group>";
+		};
+		BF936B93297F61B500C2124F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BF936B94297F61C800C2124F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
