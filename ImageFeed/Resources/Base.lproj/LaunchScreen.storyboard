@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-ZP-ea0">
-                                <rect key="frame" x="16" y="75" width="361" height="702"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="SplashScreenLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-gs-iWD">
+                                <rect key="frame" x="160" y="388" width="73" height="76"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PMZ-ZP-ea0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="1Jb-0u-TTu"/>
-                            <constraint firstItem="PMZ-ZP-ea0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="653-DX-4cp"/>
-                            <constraint firstItem="PMZ-ZP-ea0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N1a-yr-CV0"/>
-                            <constraint firstItem="PMZ-ZP-ea0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="e23-Dq-Q8k"/>
+                            <constraint firstItem="tjD-gs-iWD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vrJ-wN-nzi"/>
+                            <constraint firstItem="tjD-gs-iWD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xlm-Rr-VWT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,8 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="SplashScreenLogo.png" width="73" height="76"/>
     </resources>
 </document>
