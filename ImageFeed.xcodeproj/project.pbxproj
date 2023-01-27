@@ -16,7 +16,6 @@
 		BF12F78629798B4600DDF1DA /* ImageFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F78529798B4600DDF1DA /* ImageFeedTests.swift */; };
 		BF12F79029798B4600DDF1DA /* ImageFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F78F29798B4600DDF1DA /* ImageFeedUITests.swift */; };
 		BF12F79229798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */; };
-		BF936B9C297F680600C2124F /* SplashScreenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF936B99297F680600C2124F /* SplashScreenLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		BF12F78B29798B4600DDF1DA /* ImageFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF12F78F29798B4600DDF1DA /* ImageFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITests.swift; sourceTree = "<group>"; };
 		BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BF936B99297F680600C2124F /* SplashScreenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreenLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,28 +136,11 @@
 		BF936B94297F61C800C2124F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF936B96297F66EE00C2124F /* Images */,
-				BF936B95297F66B600C2124F /* Fonts */,
 				BF12F77729798B4600DDF1DA /* Assets.xcassets */,
 				BF12F77929798B4600DDF1DA /* LaunchScreen.storyboard */,
 				BF12F77C29798B4600DDF1DA /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		BF936B95297F66B600C2124F /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		BF936B96297F66EE00C2124F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				BF936B99297F680600C2124F /* SplashScreenLogo.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +250,6 @@
 				BF12F77B29798B4600DDF1DA /* LaunchScreen.storyboard in Resources */,
 				BF12F77829798B4600DDF1DA /* Assets.xcassets in Resources */,
 				BF12F77629798B4500DDF1DA /* Main.storyboard in Resources */,
-				BF936B9C297F680600C2124F /* SplashScreenLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
