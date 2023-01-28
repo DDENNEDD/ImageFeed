@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="SplashScreenLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-gs-iWD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="SplashScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="N4u-VR-BhD">
                                 <rect key="frame" x="160" y="388" width="73" height="76"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="YP Background"/>
                         <constraints>
-                            <constraint firstItem="tjD-gs-iWD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vrJ-wN-nzi"/>
-                            <constraint firstItem="tjD-gs-iWD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xlm-Rr-VWT"/>
+                            <constraint firstItem="N4u-VR-BhD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HlW-oO-shk"/>
+                            <constraint firstItem="N4u-VR-BhD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dJZ-7y-1Ej"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +35,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashScreenLogo.png" width="73" height="76"/>
+        <image name="SplashScreenLogo" width="73" height="76"/>
+        <namedColor name="YP Background">
+            <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
