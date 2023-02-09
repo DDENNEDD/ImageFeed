@@ -1,8 +1,20 @@
 import UIKit
 
+class ImagesListViewController: UIViewController {
+
+    @IBOutlet private var tableView: UITableView!
+    private let photosName: [String] = Array(0..<20).map { "\($0)" }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+    func configCell(for cell: ImagesListCell) { }
+}
+
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return photosName.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -12,23 +24,9 @@ extension ImagesListViewController: UITableViewDataSource {
                     return UITableViewCell()
                 }
 
-                configCell(for: imageListCell) // 3
-                return imageListCell // 4
+                configCell(for: imageListCell)
+                return imageListCell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
 }
-
-
-class ImagesListViewController: UIViewController {
-
-    @IBOutlet private var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    func configCell(for cell: ImagesListCell) { }
-}
-

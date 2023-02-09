@@ -42,8 +42,8 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.01.2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-hz-hT0" userLabel="Date Label">
-                                                    <rect key="frame" x="28.000000000000007" y="454" width="79.666666666666686" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 января 2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-hz-hT0" userLabel="Date Label">
+                                                    <rect key="frame" x="28.000000000000007" y="454" width="116.66666666666669" height="20"/>
                                                     <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="17"/>
                                                     <color key="textColor" name="white"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-3r-XdT" userLabel="Like Button">
                                                     <rect key="frame" x="333" y="23" width="30" height="26"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="LikeNotActive"/>
+                                                    <state key="normal" image="LikeButtonOff"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -66,11 +66,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="background"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="boK-5W-x8r" id="o7l-bh-MiF"/>
+                                            <outlet property="dateLabel" destination="dmR-hz-hT0" id="afc-gO-RVR"/>
+                                            <outlet property="likeButton" destination="Y3T-3r-XdT" id="Tna-e2-0kf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="VRq-hV-bsB"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="izy-3x-Uez"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Nci-ef-aRr"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -94,7 +99,7 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="LikeNotActive" width="30" height="26"/>
+        <image name="LikeButtonOff" width="30" height="26"/>
         <namedColor name="background">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
