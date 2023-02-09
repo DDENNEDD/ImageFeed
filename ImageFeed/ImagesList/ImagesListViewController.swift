@@ -27,9 +27,7 @@ extension ImagesListViewController: UITableViewDataSource {
         guard let imageListCell = cell as? ImagesListCell else {
             return UITableViewCell()
         }
-
         configCell(for: imageListCell, with: indexPath)
-
         return imageListCell
     }
 }
@@ -39,14 +37,11 @@ extension ImagesListViewController {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
             return
         }
-
         cell.cellImage.image = image
         cell.dateLabel.text = dateFormatter.string(from: Date())
-
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "LikeButtonOn") : UIImage(named: "LikeButtonOff")
         cell.likeButton.setImage(likeImage, for: .normal)
-
     }
 }
 
