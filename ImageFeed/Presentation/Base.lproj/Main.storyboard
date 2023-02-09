@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="YS Display-Medium.ttf">
-            <string>YSDisplay-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
@@ -42,9 +37,9 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 января 2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-hz-hT0" userLabel="Date Label">
-                                                    <rect key="frame" x="28" y="454" width="355" height="20"/>
-                                                    <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 января 2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-hz-hT0" userLabel="Date Label">
+                                                    <rect key="frame" x="28" y="458.33333333333331" width="355" height="15.666666666666686"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
