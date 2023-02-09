@@ -48,8 +48,9 @@
                                                     <color key="textColor" name="white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-3r-XdT" userLabel="Like Button">
+                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-3r-XdT" userLabel="Like Button">
                                                     <rect key="frame" x="333" y="23" width="30" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="LikeButtonOff"/>
                                                 </button>
@@ -59,10 +60,8 @@
                                                 <constraint firstItem="dmR-hz-hT0" firstAttribute="leading" secondItem="boK-5W-x8r" secondAttribute="leading" constant="8" id="6eB-ac-Dq6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="boK-5W-x8r" secondAttribute="bottom" id="770-t6-Tj7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="boK-5W-x8r" secondAttribute="trailing" id="F4f-Zt-Usl"/>
-                                                <constraint firstItem="Y3T-3r-XdT" firstAttribute="trailing" secondItem="boK-5W-x8r" secondAttribute="trailing" constant="-10" id="H5E-GA-Pbk"/>
                                                 <constraint firstItem="boK-5W-x8r" firstAttribute="top" secondItem="TLe-6b-Ezq" secondAttribute="topMargin" id="KyE-Ub-PoN"/>
                                                 <constraint firstItem="boK-5W-x8r" firstAttribute="leading" secondItem="TLe-6b-Ezq" secondAttribute="leadingMargin" id="ilO-rR-8eh"/>
-                                                <constraint firstItem="Y3T-3r-XdT" firstAttribute="top" secondItem="boK-5W-x8r" secondAttribute="top" constant="12" id="wvc-d7-3N4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="background"/>
