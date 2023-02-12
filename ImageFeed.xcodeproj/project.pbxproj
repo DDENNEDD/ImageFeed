@@ -107,6 +107,7 @@
 		BF12F76D29798B4500DDF1DA /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				BF67CEFE299967980038108A /* SingleImageView */,
 				BF93994F2996ACC2006115E4 /* ProfileView */,
 				BF564268299464E90078DD4C /* ImagesList */,
 				BFD90FE72984ADC200889E4D /* Helpers */,
@@ -140,9 +141,16 @@
 			children = (
 				BF564266299464C00078DD4C /* ImagesListCell.swift */,
 				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
-				BF93995229995446006115E4 /* SingleImageViewController.swift */,
 			);
 			path = ImagesList;
+			sourceTree = "<group>";
+		};
+		BF67CEFE299967980038108A /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				BF93995229995446006115E4 /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
 			sourceTree = "<group>";
 		};
 		BF936B93297F61B500C2124F /* Presentation */ = {
@@ -322,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#export PATH=\"$PATH:/opt/homebrew/bin\"\n#if which swiftlint > /dev/null; then\n#  swiftlint\n#else\n#  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
