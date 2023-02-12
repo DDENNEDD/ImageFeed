@@ -18,6 +18,7 @@
 		BF12F79229798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */; };
 		BF564267299464C00078DD4C /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF564266299464C00078DD4C /* ImagesListCell.swift */; };
 		BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9399502996ACEC006115E4 /* ProfileViewController.swift */; };
+		BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93995229995446006115E4 /* SingleImageViewController.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF564266299464C00078DD4C /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		BF9399502996ACEC006115E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF93995229995446006115E4 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			children = (
 				BF564266299464C00078DD4C /* ImagesListCell.swift */,
 				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
+				BF93995229995446006115E4 /* SingleImageViewController.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */,
 				BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */,
 				BF12F77329798B4500DDF1DA /* ImagesListViewController.swift in Sources */,
+				BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */,
 				BF564267299464C00078DD4C /* ImagesListCell.swift in Sources */,
 				BF12F76F29798B4500DDF1DA /* AppDelegate.swift in Sources */,
 				BF12F77129798B4500DDF1DA /* SceneDelegate.swift in Sources */,
