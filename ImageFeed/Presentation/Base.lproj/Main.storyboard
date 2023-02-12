@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,6 +90,7 @@
                                             <outlet property="cellImage" destination="boK-5W-x8r" id="o7l-bh-MiF"/>
                                             <outlet property="dateLabel" destination="dmR-hz-hT0" id="afc-gO-RVR"/>
                                             <outlet property="likeButton" destination="Y3T-3r-XdT" id="Tna-e2-0kf"/>
+                                            <segue destination="yPw-La-6E3" kind="show" id="ME8-wr-Pdp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -224,12 +224,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-bo-cBa">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-bo-cBa">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" name="black"/>
+                                <color key="tintColor" name="white"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QGl-8S-zmV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="black"/>
+                        <color key="tintColor" name="white"/>
                         <constraints>
                             <constraint firstItem="dI4-bo-cBa" firstAttribute="leading" secondItem="QGl-8S-zmV" secondAttribute="leading" id="0aX-I8-t9G"/>
                             <constraint firstItem="QGl-8S-zmV" firstAttribute="bottom" secondItem="dI4-bo-cBa" secondAttribute="bottom" id="1C6-fi-dV1"/>
@@ -237,6 +240,10 @@
                             <constraint firstItem="dI4-bo-cBa" firstAttribute="top" secondItem="QGl-8S-zmV" secondAttribute="top" id="v6s-vV-Fmf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Y1-ql-KNH"/>
+                    <connections>
+                        <outlet property="imageView" destination="dI4-bo-cBa" id="bbO-39-9MS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjK-ca-JnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,8 +263,5 @@
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
