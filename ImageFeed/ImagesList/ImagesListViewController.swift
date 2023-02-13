@@ -18,8 +18,10 @@ class ImagesListViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == showSingleImageSegueIdentifier {
+                // swiftlint:disable force_cast
                 let viewController = segue.destination as! SingleImageViewController
                 let indexPath = sender as! IndexPath
+                // swiftlint:enable force_cast
                 let image = UIImage(named: photosName[indexPath.row])
                 viewController.image = image
             } else {
