@@ -24,7 +24,7 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="tSW-Ga-Reb" kind="relationship" relationship="viewControllers" id="24l-49-Zzk"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZC9-j3-K25"/>
                         <segue destination="k7g-U6-51o" kind="relationship" relationship="viewControllers" id="xko-qf-xOA"/>
                     </connections>
                 </tabBarController>
@@ -108,6 +108,7 @@
                             <constraint firstItem="aLw-ae-Ko1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukl-GZ-RZP"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="TabEditorialActive" id="2zt-hu-gXC"/>
                     <navigationItem key="navigationItem" id="5zk-FD-hMg"/>
                     <connections>
                         <outlet property="tableView" destination="aLw-ae-Ko1" id="zf0-zo-EUM"/>
@@ -116,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064.885496183206" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="111" y="13"/>
         </scene>
         <!--ProfileView-->
         <scene sceneID="WGH-Nh-m0i">
@@ -192,30 +193,6 @@
             </objects>
             <point key="canvasLocation" x="111" y="-670"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="NM0-cJ-tUW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tSW-Ga-Reb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="TabEditorialActive" id="zUT-3L-YNq"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvX-NM-lHN">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="white"/>
-                        <color key="barTintColor" name="white"/>
-                        <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" name="black"/>
-                        </navigationBarAppearance>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TXo-ob-3Lv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o89-8M-5Op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
-        </scene>
         <!--Single Image View Controller-->
         <scene sceneID="9oD-BF-HzS">
             <objects>
@@ -224,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-Zq-ub7">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-Zq-ub7">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-bo-cBa">
@@ -243,6 +220,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="V5w-SC-RRc"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ahz-Gj-mlH"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yPw-La-6E3" id="oRx-oM-Jaq"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-OM-FXa">
                                 <rect key="frame" x="8" y="67" width="48" height="48"/>
@@ -273,11 +253,13 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="dI4-bo-cBa" id="bbO-39-9MS"/>
+                        <outlet property="scrollView" destination="e7e-Zq-ub7" id="3ig-YA-oLh"/>
+                        <outletCollection property="scrollView" destination="e7e-Zq-ub7" collectionClass="NSMutableArray" id="JIx-vR-qMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjK-ca-JnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919.8473282442746" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="874" y="13"/>
         </scene>
     </scenes>
     <resources>

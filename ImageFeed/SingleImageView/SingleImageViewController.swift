@@ -12,9 +12,19 @@ class SingleImageViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
-            super.viewDidLoad()
-            imageView.image = image
+        super.viewDidLoad()
+        scrollView.minimumZoomScale = 0.1
+        scrollView.maximumZoomScale = 1.25
+        imageView.image = image
         }
 }
+
+extension SingleImageViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        imageView
+    }
+} 
