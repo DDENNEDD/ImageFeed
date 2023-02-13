@@ -251,14 +251,15 @@
                         <color key="backgroundColor" name="black"/>
                         <color key="tintColor" name="white"/>
                         <constraints>
-                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="trailing" secondItem="VGP-Pm-g67" secondAttribute="trailing" id="4ED-ox-iM5"/>
+                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="right" secondItem="VGP-Pm-g67" secondAttribute="right" id="4ED-ox-iM5"/>
+                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="centerX" secondItem="VGP-Pm-g67" secondAttribute="centerX" id="6AO-qZ-mvJ"/>
                             <constraint firstItem="e8q-oE-RBJ" firstAttribute="centerX" secondItem="VGP-Pm-g67" secondAttribute="centerX" id="CSw-a9-iSY"/>
                             <constraint firstItem="cfr-OM-FXa" firstAttribute="leading" secondItem="QGl-8S-zmV" secondAttribute="leading" constant="8" id="EUb-CF-5B9"/>
                             <constraint firstItem="QGl-8S-zmV" firstAttribute="bottom" secondItem="e8q-oE-RBJ" secondAttribute="bottom" constant="36" id="Ge6-R7-h5g"/>
                             <constraint firstAttribute="bottom" secondItem="e7e-Zq-ub7" secondAttribute="bottom" id="JnQ-wf-g8z"/>
+                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="centerY" secondItem="VGP-Pm-g67" secondAttribute="centerY" id="Px0-7G-pZc"/>
                             <constraint firstItem="cfr-OM-FXa" firstAttribute="top" secondItem="QGl-8S-zmV" secondAttribute="top" constant="8" id="QYs-fH-i5s"/>
-                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="top" secondItem="VGP-Pm-g67" secondAttribute="top" id="ZWP-S1-EwF"/>
-                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="leading" secondItem="VGP-Pm-g67" secondAttribute="leading" id="b4R-va-3jm"/>
+                            <constraint firstItem="e7e-Zq-ub7" firstAttribute="left" secondItem="VGP-Pm-g67" secondAttribute="left" id="b4R-va-3jm"/>
                         </constraints>
                     </view>
                     <connections>
