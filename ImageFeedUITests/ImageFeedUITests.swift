@@ -1,12 +1,6 @@
-//
-//  ImageFeedUITests.swift
-//  ImageFeedUITests
-//
-//  Created by Денис Беляков on 19.01.2023.
-//
-
 import XCTest
 
+// swiftlint:disable all
 final class ImageFeedUITests: XCTestCase {
 
     override func setUpWithError() throws {
