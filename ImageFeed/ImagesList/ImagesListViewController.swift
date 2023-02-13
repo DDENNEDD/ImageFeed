@@ -1,7 +1,6 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
-
     @IBOutlet private var tableView: UITableView!
     private let photosName: [String] = Array(0..<20).map { "\($0)" }
     private lazy var dateFormatter: DateFormatter = {
@@ -30,6 +29,7 @@ class ImagesListViewController: UIViewController {
 }
 
 extension ImagesListViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photosName.count
     }
@@ -46,6 +46,7 @@ extension ImagesListViewController: UITableViewDataSource {
 }
 
 extension ImagesListViewController {
+
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
             return
@@ -59,6 +60,7 @@ extension ImagesListViewController {
 }
 
 extension ImagesListViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: indexPath)
     }

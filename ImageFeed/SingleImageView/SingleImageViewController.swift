@@ -12,19 +12,16 @@ class SingleImageViewController: UIViewController {
     @IBAction func didTapBackButton() {
         dismiss(animated: true, completion: nil)
     }
-    @IBOutlet var imageView: UIImageView!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
 
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBAction func didTapShareButton(_ sender: UIButton) {
         let share = UIActivityViewController(
             activityItems: [image as Any],
             applicationActivities: nil
         )
         present(share, animated: true, completion: nil)
-        
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +43,9 @@ class SingleImageViewController: UIViewController {
         scrollView.setZoomScale(scale, animated: false)
         scrollView.layoutIfNeeded()
         let newContentSize = scrollView.contentSize
-        let x = (newContentSize.width - visibleRectSize.width) / 2
-        let y = (newContentSize.height - visibleRectSize.height) / 2
-        scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
+        let xSize = (newContentSize.width - visibleRectSize.width) / 2
+        let ySize = (newContentSize.height - visibleRectSize.height) / 2
+        scrollView.setContentOffset(CGPoint(x: xSize, y: ySize), animated: false)
     }
 }
 
