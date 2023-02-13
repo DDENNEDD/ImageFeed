@@ -43,9 +43,9 @@ class SingleImageViewController: UIViewController {
         scrollView.setZoomScale(scale, animated: false)
         scrollView.layoutIfNeeded()
         let newContentSize = scrollView.contentSize
-        let xSize = (newContentSize.width - visibleRectSize.width) / 2
-        let ySize = (newContentSize.height - visibleRectSize.height) / 2
-        scrollView.setContentOffset(CGPoint(x: xSize, y: ySize), animated: false)
+        let xPoint = (newContentSize.width - visibleRectSize.width) / 2
+        let yPoint = (newContentSize.height - visibleRectSize.height) / 2
+        scrollView.setContentOffset(CGPoint(x: xPoint, y: yPoint), animated: false)
     }
 }
 
