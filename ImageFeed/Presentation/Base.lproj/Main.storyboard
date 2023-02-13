@@ -224,7 +224,7 @@
                                     <outlet property="delegate" destination="yPw-La-6E3" id="oRx-oM-Jaq"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-OM-FXa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-OM-FXa" userLabel="NavigationButton">
                                 <rect key="frame" x="8" y="67" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="00r-BZ-G3Z"/>
@@ -236,6 +236,14 @@
                                     <action selector="didTapBackButton" destination="yPw-La-6E3" eventType="touchUpInside" id="U18-eN-IL3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-oE-RBJ" userLabel="SharingButton">
+                                <rect key="frame" x="171.33333333333334" y="732" width="50.333333333333343" height="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="SharingButton"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="yPw-La-6E3" eventType="touchUpInside" id="XR7-aR-ieO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QGl-8S-zmV"/>
                         <color key="backgroundColor" name="black"/>
@@ -245,10 +253,13 @@
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="top" secondItem="VGP-Pm-g67" secondAttribute="top" id="J4K-Ps-jLd"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="leading" secondItem="VGP-Pm-g67" secondAttribute="leading" id="OVV-Ag-RNm"/>
                             <constraint firstAttribute="bottom" secondItem="e7e-Zq-ub7" secondAttribute="bottom" id="S8c-st-Kkp"/>
+                            <constraint firstItem="QGl-8S-zmV" firstAttribute="trailing" secondItem="e8q-oE-RBJ" secondAttribute="trailing" constant="171.33333333333334" id="VIa-n8-lcp"/>
+                            <constraint firstItem="e8q-oE-RBJ" firstAttribute="centerX" secondItem="QGl-8S-zmV" secondAttribute="centerX" id="WAv-Ld-hTt"/>
                             <constraint firstItem="cfr-OM-FXa" firstAttribute="leading" secondItem="QGl-8S-zmV" secondAttribute="leading" constant="8" id="X8e-5E-Ufj"/>
                             <constraint firstItem="cfr-OM-FXa" firstAttribute="top" secondItem="QGl-8S-zmV" secondAttribute="top" constant="8" id="alE-8Q-PAH"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="trailing" secondItem="QGl-8S-zmV" secondAttribute="trailing" id="fwW-9n-ngs"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="centerX" secondItem="VGP-Pm-g67" secondAttribute="centerX" id="xTt-wG-GGc"/>
+                            <constraint firstItem="QGl-8S-zmV" firstAttribute="bottom" secondItem="e8q-oE-RBJ" secondAttribute="bottom" constant="36" id="y5f-Xz-FHb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -266,6 +277,7 @@
         <image name="0" width="200" height="132"/>
         <image name="LikeButtonOff" width="29.333333969116211" height="26"/>
         <image name="NavigationBackButton" width="9" height="15.666666984558105"/>
+        <image name="SharingButton" width="50" height="50"/>
         <image name="TabEditorialActive" width="20" height="22"/>
         <image name="UserPickPhoto" width="70" height="70"/>
         <image name="UserProfileActive" width="24" height="24"/>
