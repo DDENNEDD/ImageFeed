@@ -6,7 +6,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var loginLabel: UILabel!
-
     @IBAction func didTapLogoutButton() {
     }
 }
