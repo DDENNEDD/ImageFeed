@@ -1,72 +1,83 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
-
+    private var userProfileImageView: UIImageView?
+    private var userNameLabel: UILabel?
+    private var userLoginLabel: UILabel?
+    private var userProfileDescriptionLabel: UILabel?
+    private var userLogOutButton: UIButton?
+    private let userProfileImage = UIImage(named: "UserProfileImage")
+    private let userName = "Имя Пользователя"
+    private let userLogin = "@Логин_Пользователя"
+    private let userProfileDescription = "Описание профиля"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .ypBlack
+        initView()
+        addSubview()
+        configConstaints()
+    }
 
-        let userProfileImage = UIImage(named: "UserProfileImage")
+    private func initView() {
         let userProfileImageView = UIImageView(image: userProfileImage)
+        userProfileImageView.contentMode = .scaleAspectFit
         userProfileImageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userProfileImageView)
-        userProfileImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        userProfileImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
-        userProfileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        userProfileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        self.userProfileImageView = userProfileImageView
 
-        let userName = UILabel()
-        userName.text = "Имя Пользователя"
-        userName.textColor = .ypWhite
-        userName.font = .boldSystemFont(ofSize: 23)
-        userName.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userName)
-        userName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        userName.topAnchor.constraint(equalTo: userProfileImageView.bottomAnchor, constant: 8).isActive = true
+        let userNameLabel = UILabel()
+        userNameLabel.text = userName
+        userNameLabel.textColor = .ypWhite
+        userNameLabel.font = .boldSystemFont(ofSize: 23)
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.userNameLabel = userNameLabel
 
+        let userLoginLabel = UILabel()
+        userLoginLabel.text = userLogin
+        userLoginLabel.textColor = .ypGray
+        userLoginLabel.font = .systemFont(ofSize: 13)
+        userLoginLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.userLoginLabel = userLoginLabel
 
-
-        let userLogin = UILabel()
-        userLogin.text = "@Логин_Пользователя"
-        userLogin.textColor = .ypGray
-        userLogin.font = .systemFont(ofSize: 13)
-        userLogin.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userLogin)
-        userLogin.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        userLogin.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 8).isActive = true
-
-
-
-
-        let userProfileDescription = UILabel()
-        userProfileDescription.text = "Описание профиля"
-        userProfileDescription.textColor = .ypWhite
-        userProfileDescription.font = .systemFont(ofSize: 13)
-        userProfileDescription.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userProfileDescription)
-        userProfileDescription.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        userProfileDescription.topAnchor.constraint(equalTo: userLogin.bottomAnchor, constant: 8).isActive = true
+        let userProfileDescriptionLabel = UILabel()
+        userProfileDescriptionLabel.text = userProfileDescription
+        userProfileDescriptionLabel.textColor = .ypWhite
+        userProfileDescriptionLabel.font = .systemFont(ofSize: 13)
+        userProfileDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.userProfileDescriptionLabel = userProfileDescriptionLabel
 
         let userLogOutButton = UIButton()
         let userLogOutButtonImage = UIImage(named: "iPadAndArrowForward")
-        userLogOutButton.imageView?.contentMode = .scaleAspectFit
+        userLogOutButton.contentMode = .scaleAspectFit
         userLogOutButton.setImage(userLogOutButtonImage, for: .normal)
         userLogOutButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userLogOutButton)
-        userLogOutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -26).isActive = true
-        userLogOutButton.centerYAnchor.constraint(equalTo: userProfileImageView.centerYAnchor).isActive = true
-        userLogOutButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        userLogOutButton.heightAnchor.constraint(equalToConstant: 22).isActive = true
-
-
-
-
-
-
-
-
-
+        self.userLogOutButton = userLogOutButton
     }
 
+    private func addSubview() {
+            view.addSubview(userProfileImageView ?? UIImageView())
+            view.addSubview(userNameLabel ?? UILabel())
+            view.addSubview(userLoginLabel ?? UILabel())
+            view.addSubview(userProfileDescriptionLabel ?? UILabel())
+            view.addSubview(userLogOutButton ?? UIButton())
+        }
+
+    private func configConstaints() {
+        NSLayoutConstraint.activate([
+            userProfileImageView!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            userProfileImageView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            userProfileImageView!.widthAnchor.constraint(equalToConstant: 70),
+            userProfileImageView!.heightAnchor.constraint(equalToConstant: 70),
+            userNameLabel!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            userNameLabel!.topAnchor.constraint(equalTo: userProfileImageView!.bottomAnchor, constant: 8),
+            userLoginLabel!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            userLoginLabel!.topAnchor.constraint(equalTo: userNameLabel!.bottomAnchor, constant: 8),
+            userProfileDescriptionLabel!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            userProfileDescriptionLabel!.topAnchor.constraint(equalTo: userLoginLabel!.bottomAnchor, constant: 8),
+            userLogOutButton!.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -26),
+            userLogOutButton!.centerYAnchor.constraint(equalTo: userProfileImageView!.centerYAnchor),
+            userLogOutButton!.widthAnchor.constraint(equalToConstant: 20),
+            userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)])
+
+    }
 }
