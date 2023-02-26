@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "iPadAndArrowForward.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "iiPadAndArrowForward@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "iPadAndArrowForward@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "ipad.and.arrow.forward@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
