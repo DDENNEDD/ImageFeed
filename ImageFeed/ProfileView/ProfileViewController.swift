@@ -78,6 +78,5 @@ class ProfileViewController: UIViewController {
             userLogOutButton!.centerYAnchor.constraint(equalTo: userProfileImageView!.centerYAnchor),
             userLogOutButton!.widthAnchor.constraint(equalToConstant: 20),
             userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)])
-
     }
 }
