@@ -1,6 +1,7 @@
 import XCTest
 @testable import ImageFeed
 
+// swiftlint:disable all
 final class ImageFeedTests: XCTestCase {
 
     override func setUpWithError() throws {
