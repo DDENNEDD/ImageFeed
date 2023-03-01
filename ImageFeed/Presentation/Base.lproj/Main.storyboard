@@ -89,7 +89,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="boK-5W-x8r" secondAttribute="bottom" constant="4" id="yDp-cz-8ZX"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="black"/>
+                                        <color key="backgroundColor" name="Black"/>
                                         <connections>
                                             <outlet property="cellImage" destination="boK-5W-x8r" id="o7l-bh-MiF"/>
                                             <outlet property="dateLabel" destination="dmR-hz-hT0" id="afc-gO-RVR"/>
@@ -356,9 +356,6 @@
         </namedColor>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="black">
-            <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
