@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cAD-4H-enP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cAD-4H-enP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -226,7 +226,7 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-OM-FXa" userLabel="NavigationButton">
-                                <rect key="frame" x="8" y="67" width="48" height="48"/>
+                                <rect key="frame" x="16" y="60" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="CxF-g3-8KU"/>
                                     <constraint firstAttribute="height" constant="48" id="SQp-fa-IyM"/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-oE-RBJ" userLabel="SharingButton">
-                                <rect key="frame" x="171.66666666666666" y="732" width="50" height="50"/>
+                                <rect key="frame" x="171.66666666666666" y="766" width="50" height="50"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="SharingButton"/>
                                 <connections>
@@ -253,11 +253,11 @@
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="right" secondItem="VGP-Pm-g67" secondAttribute="right" id="4ED-ox-iM5"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="centerX" secondItem="VGP-Pm-g67" secondAttribute="centerX" id="6AO-qZ-mvJ"/>
                             <constraint firstItem="e8q-oE-RBJ" firstAttribute="centerX" secondItem="VGP-Pm-g67" secondAttribute="centerX" id="CSw-a9-iSY"/>
-                            <constraint firstItem="cfr-OM-FXa" firstAttribute="leading" secondItem="QGl-8S-zmV" secondAttribute="leading" constant="8" id="EUb-CF-5B9"/>
+                            <constraint firstItem="cfr-OM-FXa" firstAttribute="leading" secondItem="VGP-Pm-g67" secondAttribute="leading" constant="16" id="EUb-CF-5B9"/>
                             <constraint firstItem="QGl-8S-zmV" firstAttribute="bottom" secondItem="e8q-oE-RBJ" secondAttribute="bottom" constant="36" id="Ge6-R7-h5g"/>
                             <constraint firstAttribute="bottom" secondItem="e7e-Zq-ub7" secondAttribute="bottom" id="JnQ-wf-g8z"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="centerY" secondItem="VGP-Pm-g67" secondAttribute="centerY" id="Px0-7G-pZc"/>
-                            <constraint firstItem="cfr-OM-FXa" firstAttribute="top" secondItem="QGl-8S-zmV" secondAttribute="top" constant="8" id="QYs-fH-i5s"/>
+                            <constraint firstItem="cfr-OM-FXa" firstAttribute="top" secondItem="VGP-Pm-g67" secondAttribute="top" constant="60" id="QYs-fH-i5s"/>
                             <constraint firstItem="e7e-Zq-ub7" firstAttribute="left" secondItem="VGP-Pm-g67" secondAttribute="left" id="b4R-va-3jm"/>
                         </constraints>
                     </view>
@@ -289,32 +289,53 @@
             </objects>
             <point key="canvasLocation" x="-695" y="-1514"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View View Controller-->
         <scene sceneID="t9y-6n-B21">
             <objects>
-                <viewController id="Rf6-3M-Xev" sceneMemberID="viewController">
+                <viewController id="Rf6-3M-Xev" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eE8-oI-7gy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEw-bG-yR8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="White"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2F-W4-WBk" userLabel="NavigationButton">
+                                <rect key="frame" x="16" y="60" width="48" height="48"/>
+                                <color key="backgroundColor" name="White"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="ifn-U8-ubh"/>
+                                    <constraint firstAttribute="width" constant="48" id="jme-DD-doN"/>
+                                </constraints>
+                                <color key="tintColor" name="Black"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="NavigationBackButtonBlack">
+                                    <color key="titleColor" name="Black"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="Rf6-3M-Xev" eventType="touchUpInside" id="2Ab-R8-Pmf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bVL-p5-tUx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="R2F-W4-WBk" firstAttribute="top" secondItem="eE8-oI-7gy" secondAttribute="top" constant="60" id="5DP-bh-ROH"/>
                             <constraint firstItem="gEw-bG-yR8" firstAttribute="top" secondItem="bVL-p5-tUx" secondAttribute="top" id="6SW-Jg-OA8"/>
+                            <constraint firstItem="R2F-W4-WBk" firstAttribute="leading" secondItem="eE8-oI-7gy" secondAttribute="leading" constant="16" id="GE9-p8-P4L"/>
                             <constraint firstItem="gEw-bG-yR8" firstAttribute="trailing" secondItem="bVL-p5-tUx" secondAttribute="trailing" id="NP9-dp-4oK"/>
                             <constraint firstItem="gEw-bG-yR8" firstAttribute="bottom" secondItem="bVL-p5-tUx" secondAttribute="bottom" id="QOh-qV-lTu"/>
                             <constraint firstItem="gEw-bG-yR8" firstAttribute="leading" secondItem="bVL-p5-tUx" secondAttribute="leading" id="QT6-vZ-jNL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="gEw-bG-yR8" id="VFN-Ii-4lS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRF-51-Rs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +347,7 @@
         <image name="AuthScreenLogo" width="60" height="60"/>
         <image name="LikeButtonOff" width="29.333333969116211" height="26"/>
         <image name="NavigationBackButton" width="9" height="15.666666984558105"/>
+        <image name="NavigationBackButtonBlack" width="9" height="15.666666984558105"/>
         <image name="SharingButton" width="50" height="50"/>
         <image name="TabEditorialActive" width="20" height="22"/>
         <image name="UserProfileActive" width="24" height="24"/>
