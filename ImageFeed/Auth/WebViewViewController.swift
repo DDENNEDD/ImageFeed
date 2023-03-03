@@ -33,6 +33,7 @@ extension WebViewViewController: WKNavigationDelegate {
                 decisionHandler(.allow)
             }
         }
+
     func loadWebView() {
         var urlComponents = URLComponents(string: APIConstants.UnsplashAuthorizeURLString)!
         urlComponents.queryItems = [
