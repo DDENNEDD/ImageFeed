@@ -195,13 +195,21 @@
 		BF97447029AE485500BB09DB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
 				BF97447129AE487300BB09DB /* AuthViewController.swift */,
 				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
 				BF60616F29B0C22A00070B98 /* WebViewViewControllerDelegate.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BFC3CCBC29B410F2008D0733 /* OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
 				BF60617129B3F2E000070B98 /* OAuth2Service.swift */,
 				BF60617329B3F4CC00070B98 /* OAuth2TokenStorage.swift */,
 			);
-			path = Auth;
+			path = OAuth2;
 			sourceTree = "<group>";
 		};
 		BFD90FE72984ADC200889E4D /* Helpers */ = {
