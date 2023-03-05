@@ -26,6 +26,8 @@
 		BF97446F29ADFFA100BB09DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97446E29ADFFA100BB09DB /* Constants.swift */; };
 		BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97447129AE487300BB09DB /* AuthViewController.swift */; };
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
+		BFC3CCC129B502DE008D0733 /* OAuthTokenResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCC029B502DE008D0733 /* OAuthTokenResponseBody.swift */; };
+		BFC3CCC929B52420008D0733 /* AuthViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		BF97446E29ADFFA100BB09DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF97447129AE487300BB09DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BFC3CCC029B502DE008D0733 /* OAuthTokenResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenResponseBody.swift; sourceTree = "<group>"; };
+		BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				BF12F77429798B4500DDF1DA /* Main.storyboard */,
+				BF12F77929798B4600DDF1DA /* LaunchScreen.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -181,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				BF12F77729798B4600DDF1DA /* Assets.xcassets */,
-				BF12F77929798B4600DDF1DA /* LaunchScreen.storyboard */,
 				BF12F77C29798B4600DDF1DA /* Info.plist */,
 			);
 			path = Resources;
@@ -202,6 +206,7 @@
 				BF97447129AE487300BB09DB /* AuthViewController.swift */,
 				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
 				BF60616F29B0C22A00070B98 /* WebViewViewControllerDelegate.swift */,
+				BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			children = (
 				BF60617129B3F2E000070B98 /* OAuth2Service.swift */,
 				BF60617329B3F4CC00070B98 /* OAuth2TokenStorage.swift */,
+				BFC3CCC029B502DE008D0733 /* OAuthTokenResponseBody.swift */,
 			);
 			path = OAuth2;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			files = (
 				BF10AD8229AE4F34003765F2 /* WebViewViewController.swift in Sources */,
 				BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */,
+				BFC3CCC129B502DE008D0733 /* OAuthTokenResponseBody.swift in Sources */,
 				BF60617229B3F2E000070B98 /* OAuth2Service.swift in Sources */,
 				BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */,
 				BF12F77329798B4500DDF1DA /* ImagesListViewController.swift in Sources */,
@@ -398,6 +405,7 @@
 				BF12F77129798B4500DDF1DA /* SceneDelegate.swift in Sources */,
 				BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */,
 				BF60617429B3F4CC00070B98 /* OAuth2TokenStorage.swift in Sources */,
+				BFC3CCC929B52420008D0733 /* AuthViewControllerDelegate.swift in Sources */,
 				BF97446F29ADFFA100BB09DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
