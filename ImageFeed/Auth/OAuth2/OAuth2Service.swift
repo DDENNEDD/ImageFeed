@@ -6,14 +6,14 @@ final class OAuth2Service {
     private let urlSession = URLSession.shared
     private (set) var authToken: String? {
         get {
-            return OAuth2TokenStorage().token
+            OAuth2TokenStorage().token
         }
         set {
             OAuth2TokenStorage().token = newValue
-        } }
-    func fetchOAuthToken(
-        _ code: String,
-        completion: @escaping (Result<String, Error>) -> Void ) {
+        }
+    }
+
+    func fetchOAuthToken(_ code: String, completion: @escaping (Result<String, Error>) -> Void ) {
             let request = authTokenRequest(code: code)
             let task = object(for: request) { [weak self] result in
                 guard let self = self else { return }
@@ -42,6 +42,7 @@ extension OAuth2Service {
             completion(response)
         }
     }
+
     private func authTokenRequest(code: String) -> URLRequest {
         URLRequest.makeHTTPRequest(
             path: "/oauth/token"
@@ -54,6 +55,7 @@ extension OAuth2Service {
             baseURL: baseURL
         )
     }
+
     private struct OAuthTokenResponseBody: Decodable {
         let accessToken: String
         let tokenType: String
@@ -69,35 +71,31 @@ extension OAuth2Service {
 }
 
 extension URLRequest {
-    static func makeHTTPRequest(
-        path: String,
-        httpMethod: String,
-        baseURL: URL = DefaultBaseURL
-    ) -> URLRequest {
+    static func makeHTTPRequest(path: String, httpMethod: String, baseURL: URL = DefaultBaseURL) -> URLRequest {
         var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
         request.httpMethod = httpMethod
         return request
-    } }
+    }
+}
+
 enum NetworkError: Error {
     case httpStatusCode(Int)
     case urlRequestError(Error)
     case urlSessionError
 }
+
 extension URLSession {
-    func data(
-        for request: URLRequest,
-        completion: @escaping (Result<Data, Error>) -> Void
-    ) -> URLSessionTask {
+    func data(for request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionTask {
         let fulfillCompletion: (Result<Data, Error>) -> Void = { result in
             DispatchQueue.main.async {
                 completion(result)
             }
         }
+
         let task = dataTask(with: request, completionHandler: { data, response, error in
             if let data = data,
                let response = response,
-               let statusCode = (response as? HTTPURLResponse)?.statusCode
-            {
+               let statusCode = (response as? HTTPURLResponse)?.statusCode {
                 if 200 ..< 300 ~= statusCode {
                     fulfillCompletion(.success(data))
                 } else {
