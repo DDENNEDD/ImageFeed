@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIs-pg-ogV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIs-pg-ogV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Splash View Controller-->
+        <!--SplashViewController-->
         <scene sceneID="vGM-NB-Qgl">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" id="gIs-pg-ogV" customClass="SplashViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" id="gIs-pg-ogV" userLabel="SplashViewController" customClass="SplashViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mgW-jY-zCY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
                             <constraint firstItem="aLw-ae-Ko1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukl-GZ-RZP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="TabEditorialActive" id="2zt-hu-gXC"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="TabEditorialActive" id="2zt-hu-gXC" userLabel="Tab Bar Item"/>
                     <navigationItem key="navigationItem" id="5zk-FD-hMg"/>
                     <connections>
                         <outlet property="tableView" destination="aLw-ae-Ko1" id="zf0-zo-EUM"/>
@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="111" y="13"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--AuthViewController-->
         <scene sceneID="RX5-rq-CyU">
             <objects>
-                <viewController id="BdF-9I-PdO" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BdF-9I-PdO" userLabel="AuthViewController" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6gM-ia-k5z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +170,7 @@
                                     <constraint firstAttribute="width" constant="60" id="yBH-Gr-Ta4"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-Ke-HoN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-Ke-HoN" userLabel="LogOnButton">
                                 <rect key="frame" x="16" y="680" width="361" height="48"/>
                                 <color key="backgroundColor" name="White"/>
                                 <constraints>
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="111" y="-670"/>
         </scene>
-        <!--Single Image View Controller-->
+        <!--SingleImageViewController-->
         <scene sceneID="9oD-BF-HzS">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yPw-La-6E3" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yPw-La-6E3" userLabel="SingleImageViewController" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VGP-Pm-g67">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-oE-RBJ" userLabel="SharingButton">
-                                <rect key="frame" x="171.66666666666666" y="732" width="50" height="50"/>
+                                <rect key="frame" x="171.66666666666666" y="766" width="50" height="50"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="SharingButton"/>
                                 <connections>
@@ -303,13 +303,13 @@
             </objects>
             <point key="canvasLocation" x="872.51908396946567" y="12.67605633802817"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavigationController-->
         <scene sceneID="pyK-je-D5K">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cAD-4H-enP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cAD-4H-enP" userLabel="NavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="awB-RF-Xzw">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -321,16 +321,16 @@
             </objects>
             <point key="canvasLocation" x="-695" y="-1514"/>
         </scene>
-        <!--Web View View Controller-->
+        <!--WebViewViewController-->
         <scene sceneID="t9y-6n-B21">
             <objects>
-                <viewController id="Rf6-3M-Xev" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rf6-3M-Xev" userLabel="WebViewViewController" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eE8-oI-7gy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEw-bG-yR8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="White"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
