@@ -1,7 +1,7 @@
 import Foundation
 
 final class OAuth2Service {
-    
+
     static let shared = OAuth2Service()
     private let urlSession = URLSession.shared
     private (set) var authToken: String? {
@@ -12,7 +12,7 @@ final class OAuth2Service {
             OAuth2TokenStorage().token = newValue
         }
     }
-    
+
     func fetchOAuthToken(_ code: String, completion: @escaping (Result<String, Error>) -> Void ) {
         let request = authTokenRequest(code: code)
         let task = object(for: request) { [weak self] result in
@@ -42,7 +42,7 @@ extension OAuth2Service {
             completion(response)
         }
     }
-    
+
     private func authTokenRequest(code: String) -> URLRequest {
         URLRequest.makeHTTPRequest(
             path: "/oauth/token"
@@ -55,13 +55,13 @@ extension OAuth2Service {
             baseURL: baseURL
         )
     }
-    
+
     private struct OAuthTokenResponseBody: Decodable {
         let accessToken: String
         let tokenType: String
         let scope: String
         let createdAt: Int
-        
+
         enum CodingKeys: String, CodingKey {
             case accessToken = "access_token"
             case tokenType = "token_type"
@@ -92,7 +92,7 @@ extension URLSession {
                 completion(result)
             }
         }
-        
+
         let task = dataTask(with: request, completionHandler: { data, response, error in
             if let data = data,
                let response = response,
