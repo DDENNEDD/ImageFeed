@@ -2,7 +2,7 @@ import WebKit
 import UIKit
 
 private struct APIConstants {
-    static let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
     static let code = "code"
 }
 
@@ -64,7 +64,7 @@ extension WebViewViewController: WKNavigationDelegate {
         }
 
     func loadWebView() {
-        var urlComponents = URLComponents(string: APIConstants.UnsplashAuthorizeURLString)!
+        var urlComponents = URLComponents(string: APIConstants.unsplashAuthorizeURLString)!
         urlComponents.queryItems = [
             URLQueryItem(name: "client_id", value: AccessKey),
             URLQueryItem(name: "redirect_uri", value: RedirectURI),
