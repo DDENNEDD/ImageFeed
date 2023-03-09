@@ -15,6 +15,10 @@ final class ProfileViewController: UIViewController {
     private var userProfileDescriptionLabel: UILabel?
     private var userLogOutButton: UIButton?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
