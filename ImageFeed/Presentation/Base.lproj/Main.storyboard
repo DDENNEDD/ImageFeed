@@ -87,7 +87,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="boK-5W-x8r" userLabel="Cell Image">
                                                     <rect key="frame" x="16" y="4" width="361" height="485"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" White="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" name="White"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -144,7 +144,7 @@
                             <constraint firstItem="aLw-ae-Ko1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukl-GZ-RZP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="TabEditorialActive" id="2zt-hu-gXC" userLabel="Tab Bar Item"/>
+                    <tabBarItem key="tabBarItem" title="" image="TabEditorialActive" id="2zt-hu-gXC" userLabel="Tab Bar Item"/>
                     <navigationItem key="navigationItem" id="5zk-FD-hMg"/>
                     <connections>
                         <outlet property="tableView" destination="aLw-ae-Ko1" id="zf0-zo-EUM"/>
@@ -176,11 +176,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="NQO-EH-09I"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                    <color key="baseForegroundColor" name="Black"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" name="Black"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
@@ -399,7 +399,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color White="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
