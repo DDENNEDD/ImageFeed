@@ -87,7 +87,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="boK-5W-x8r" userLabel="Cell Image">
                                                     <rect key="frame" x="16" y="4" width="361" height="485"/>
-                                                    <color key="backgroundColor" White="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" name="White"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -330,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEw-bG-yR8">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="743"/>
                                 <color key="backgroundColor" name="White"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -362,7 +362,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="R2F-W4-WBk" firstAttribute="top" secondItem="eE8-oI-7gy" secondAttribute="top" constant="60" id="5DP-bh-ROH"/>
-                            <constraint firstItem="gEw-bG-yR8" firstAttribute="top" secondItem="bVL-p5-tUx" secondAttribute="top" id="6SW-Jg-OA8"/>
+                            <constraint firstItem="gEw-bG-yR8" firstAttribute="top" secondItem="AuF-Qh-8F5" secondAttribute="bottom" constant="1" id="6SW-Jg-OA8"/>
                             <constraint firstItem="R2F-W4-WBk" firstAttribute="leading" secondItem="eE8-oI-7gy" secondAttribute="leading" constant="16" id="GE9-p8-P4L"/>
                             <constraint firstItem="bVL-p5-tUx" firstAttribute="trailing" secondItem="AuF-Qh-8F5" secondAttribute="trailing" id="JFq-I9-SID"/>
                             <constraint firstItem="gEw-bG-yR8" firstAttribute="trailing" secondItem="bVL-p5-tUx" secondAttribute="trailing" id="NP9-dp-4oK"/>
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRF-51-Rs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="-1514"/>
+            <point key="canvasLocation" x="872.51908396946567" y="-1514.0845070422536"/>
         </scene>
     </scenes>
     <resources>
@@ -399,7 +399,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
-            <color White="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
