@@ -157,6 +157,13 @@
 			path = ImageFeedUITests;
 			sourceTree = "<group>";
 		};
+		BF3D981229BD30D8001CA353 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		BF564268299464E90078DD4C /* ImagesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +221,7 @@
 		BF9E3F9F29BCFB9300EB5D1F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BF3D981229BD30D8001CA353 /* Profile */,
 				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
 			);
 			path = Service;
