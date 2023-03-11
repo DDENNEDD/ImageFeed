@@ -123,6 +123,7 @@
 		BF12F76D29798B4500DDF1DA /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				BF9E3F9F29BCFB9300EB5D1F /* Service */,
 				BFC3CCBD29B41369008D0733 /* SplashView */,
 				BF97447029AE485500BB09DB /* Auth */,
 				BF67CEFE299967980038108A /* SingleImageView */,
@@ -200,13 +201,20 @@
 		BF97447029AE485500BB09DB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
 				BF97447129AE487300BB09DB /* AuthViewController.swift */,
 				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
 				BF60616F29B0C22A00070B98 /* WebViewViewControllerDelegate.swift */,
 				BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		BF9E3F9F29BCFB9300EB5D1F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		BFC3CCBC29B410F2008D0733 /* OAuth2 */ = {
