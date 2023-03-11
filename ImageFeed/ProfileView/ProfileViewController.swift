@@ -23,7 +23,7 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         initView()
         addSubview()
-        configConstaints()
+        configConstraints()
     }
 
     private func initView() {
@@ -69,7 +69,7 @@ final class ProfileViewController: UIViewController {
             view.addSubview(userLogOutButton ?? UIButton())
     }
 
-    private func configConstaints() {
+    private func configConstraints() {
         NSLayoutConstraint.activate([
             userProfileImageView!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             userProfileImageView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
