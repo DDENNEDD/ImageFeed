@@ -1,15 +1,23 @@
 import UIKit
 
+private struct ProfileConstants {
+    static let userName = "Имя Пользователя"
+    static let userLogin = "@Логин_Пользователя"
+    static let userProfileDescription = "Описание профиля"
+    static let userProfileImage = UIImage(named: "UserProfileImage")
+    static let userLogOutButtonImage = UIImage(named: "iPadAndArrowForward")
+}
+
 final class ProfileViewController: UIViewController {
     private var userProfileImageView: UIImageView?
     private var userNameLabel: UILabel?
     private var userLoginLabel: UILabel?
     private var userProfileDescriptionLabel: UILabel?
     private var userLogOutButton: UIButton?
-    private let userProfileImage = UIImage(named: "UserProfileImage")
-    private let userName = "Имя Пользователя"
-    private let userLogin = "@Логин_Пользователя"
-    private let userProfileDescription = "Описание профиля"
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,34 +27,34 @@ final class ProfileViewController: UIViewController {
     }
 
     private func initView() {
-        let userProfileImageView = UIImageView(image: userProfileImage)
+        let userProfileImageView = UIImageView(image: ProfileConstants.userProfileImage)
         userProfileImageView.contentMode = .scaleAspectFit
         userProfileImageView.translatesAutoresizingMaskIntoConstraints = false
         self.userProfileImageView = userProfileImageView
 
         let userNameLabel = UILabel()
-        userNameLabel.text = userName
+        userNameLabel.text = ProfileConstants.userName
         userNameLabel.textColor = .ypWhite
         userNameLabel.font = .boldSystemFont(ofSize: 23)
         userNameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.userNameLabel = userNameLabel
 
         let userLoginLabel = UILabel()
-        userLoginLabel.text = userLogin
+        userLoginLabel.text = ProfileConstants.userLogin
         userLoginLabel.textColor = .ypGray
         userLoginLabel.font = .systemFont(ofSize: 13)
         userLoginLabel.translatesAutoresizingMaskIntoConstraints = false
         self.userLoginLabel = userLoginLabel
 
         let userProfileDescriptionLabel = UILabel()
-        userProfileDescriptionLabel.text = userProfileDescription
+        userProfileDescriptionLabel.text = ProfileConstants.userProfileDescription
         userProfileDescriptionLabel.textColor = .ypWhite
         userProfileDescriptionLabel.font = .systemFont(ofSize: 13)
         userProfileDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         self.userProfileDescriptionLabel = userProfileDescriptionLabel
 
         let userLogOutButton = UIButton()
-        let userLogOutButtonImage = UIImage(named: "iPadAndArrowForward")
+        let userLogOutButtonImage = ProfileConstants.userLogOutButtonImage
         userLogOutButton.contentMode = .scaleAspectFit
         userLogOutButton.setImage(userLogOutButtonImage, for: .normal)
         userLogOutButton.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +67,7 @@ final class ProfileViewController: UIViewController {
             view.addSubview(userLoginLabel ?? UILabel())
             view.addSubview(userProfileDescriptionLabel ?? UILabel())
             view.addSubview(userLogOutButton ?? UIButton())
-        }
+    }
 
     private func configConstaints() {
         NSLayoutConstraint.activate([
