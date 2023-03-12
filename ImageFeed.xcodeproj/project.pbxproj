@@ -27,6 +27,7 @@
 		BF97446F29ADFFA100BB09DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97446E29ADFFA100BB09DB /* Constants.swift */; };
 		BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97447129AE487300BB09DB /* AuthViewController.swift */; };
 		BFC245A629BD32A50055646C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC245A529BD32A50055646C /* ProfileService.swift */; };
+		BFC245A829BE73F50055646C /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */; };
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
 		BFC3CCC929B52420008D0733 /* AuthViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
@@ -73,6 +74,7 @@
 		BF97446E29ADFFA100BB09DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF97447129AE487300BB09DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BFC245A529BD32A50055646C /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				BFC245A429BD32860055646C /* Profile */,
 				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
+				BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				BF60617429B3F4CC00070B98 /* OAuth2TokenStorage.swift in Sources */,
 				BFC3CCC929B52420008D0733 /* AuthViewControllerDelegate.swift in Sources */,
 				BF97446F29ADFFA100BB09DB /* Constants.swift in Sources */,
+				BFC245A829BE73F50055646C /* UIBlockingProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
