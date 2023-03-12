@@ -20,9 +20,8 @@ struct ProfileResult: Codable {
 
 struct Profile {
     let userName: String
-    let firstName: String
-    let lastName: String
-    let bio: String?
+    let userLogin: String
+    let userProfileDescription: String?
 }
 
 func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void) {
