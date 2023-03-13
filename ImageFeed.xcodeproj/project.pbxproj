@@ -131,9 +131,9 @@
 		BF12F76D29798B4500DDF1DA /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
-				BF9E3F9F29BCFB9300EB5D1F /* ServiceLayer */,
-				BFC3CCBD29B41369008D0733 /* SplashView */,
 				BF97447029AE485500BB09DB /* Auth */,
+				BF9E3F9F29BCFB9300EB5D1F /* ServiceAccessLayer */,
+				BFC3CCBD29B41369008D0733 /* SplashView */,
 				BF67CEFE299967980038108A /* SingleImageView */,
 				BF93994F2996ACC2006115E4 /* ProfileView */,
 				BF564268299464E90078DD4C /* ImagesList */,
@@ -217,14 +217,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		BF9E3F9F29BCFB9300EB5D1F /* ServiceLayer */ = {
+		BF9E3F9F29BCFB9300EB5D1F /* ServiceAccessLayer */ = {
 			isa = PBXGroup;
 			children = (
 				BFC245A429BD32860055646C /* Profile */,
 				BFC3CCBC29B410F2008D0733 /* OAuth2 */,
 				BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */,
 			);
-			path = ServiceLayer;
+			path = ServiceAccessLayer;
 			sourceTree = "<group>";
 		};
 		BFC245A429BD32860055646C /* Profile */ = {
