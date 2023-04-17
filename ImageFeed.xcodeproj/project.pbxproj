@@ -131,12 +131,12 @@
 		BF12F76D29798B4500DDF1DA /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				BFDCA47E29EDEB4900B59411 /* Scenes */,
+				BFDCA47D29EDEABB00B59411 /* Services */,
 				BF97447029AE485500BB09DB /* Auth */,
 				BF9E3F9F29BCFB9300EB5D1F /* ServiceAccessLayer */,
 				BFC3CCBD29B41369008D0733 /* SplashView */,
-				BF67CEFE299967980038108A /* SingleImageView */,
 				BF93994F2996ACC2006115E4 /* ProfileView */,
-				BF564268299464E90078DD4C /* ImagesList */,
 				BFD90FE72984ADC200889E4D /* Helpers */,
 				BF936B93297F61B500C2124F /* Presentation */,
 				BF936B94297F61C800C2124F /* Resources */,
@@ -209,7 +209,6 @@
 		BF97447029AE485500BB09DB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				BF97447129AE487300BB09DB /* AuthViewController.swift */,
 				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
 				BF60616F29B0C22A00070B98 /* WebViewViewControllerDelegate.swift */,
 				BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */,
@@ -230,7 +229,6 @@
 		BFC245A429BD32860055646C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				BFC245A529BD32A50055646C /* ProfileService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -238,7 +236,6 @@
 		BFC3CCBC29B410F2008D0733 /* OAuth2 */ = {
 			isa = PBXGroup;
 			children = (
-				BF60617129B3F2E000070B98 /* OAuth2Service.swift */,
 				BF60617329B3F4CC00070B98 /* OAuth2TokenStorage.swift */,
 			);
 			path = OAuth2;
@@ -259,6 +256,41 @@
 				BF97446E29ADFFA100BB09DB /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BFDCA47D29EDEABB00B59411 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF60617129B3F2E000070B98 /* OAuth2Service.swift */,
+				BFC245A529BD32A50055646C /* ProfileService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BFDCA47E29EDEB4900B59411 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BFDCA48029EDEB9A00B59411 /* ImageList */,
+				BFDCA47F29EDEB5900B59411 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BFDCA47F29EDEB5900B59411 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF97447129AE487300BB09DB /* AuthViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BFDCA48029EDEB9A00B59411 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				BF564268299464E90078DD4C /* ImagesList */,
+				BF67CEFE299967980038108A /* SingleImageView */,
+			);
+			path = ImageList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
