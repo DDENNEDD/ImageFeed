@@ -32,6 +32,9 @@
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
 		BFC3CCC929B52420008D0733 /* AuthViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
+		BFDCA48629EDEECB00B59411 /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */; };
+		BFDCA48829EDEEDF00B59411 /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48729EDEEDF00B59411 /* YSDisplay-Medium.ttf */; };
+		BFDCA48A29EDEEEB00B59411 /* YSDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48929EDEEEB00B59411 /* YSDisplay-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BFC3CCC829B52420008D0733 /* AuthViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
+		BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		BFDCA48729EDEEDF00B59411 /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		BFDCA48929EDEEEB00B59411 /* YSDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +287,9 @@
 		BFDCA48329EDED8C00B59411 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */,
+				BFDCA48729EDEEDF00B59411 /* YSDisplay-Medium.ttf */,
+				BFDCA48929EDEEEB00B59411 /* YSDisplay-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -406,8 +415,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDCA48A29EDEEEB00B59411 /* YSDisplay-Regular.ttf in Resources */,
 				BF12F77B29798B4600DDF1DA /* LaunchScreen.storyboard in Resources */,
 				BF12F77829798B4600DDF1DA /* Assets.xcassets in Resources */,
+				BFDCA48629EDEECB00B59411 /* YSDisplay-Bold.ttf in Resources */,
+				BFDCA48829EDEEDF00B59411 /* YSDisplay-Medium.ttf in Resources */,
 				BF12F77629798B4500DDF1DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
