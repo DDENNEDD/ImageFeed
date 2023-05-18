@@ -55,19 +55,6 @@ extension SplashViewController: AuthViewControllerDelegate {
         }
     }
 
-//    private func fetchOAuth2Token(_ code: String) {
-//        oauth2Service.fetchOAuth2Token(code) { [weak self] result in
-//            guard let self = self else { return }
-//            switch result {
-//            case .success:
-//                self.switchToTabBarController()
-//                UIBlockingProgressHUD.dismiss()
-//            case .failure:
-//                UIBlockingProgressHUD.dismiss()
-//                // TODO: Error
-//            }
-//        }
-//    }
     private func fetchOAuth2Token(_ code: String) {
         oauth2Service.fetchOAuth2Token(code) { [weak self] result in
             guard let self = self else { return }
@@ -77,12 +64,10 @@ extension SplashViewController: AuthViewControllerDelegate {
                 UIBlockingProgressHUD.dismiss()
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
-                
-                // Log the error for debugging
+
                 print("OAuth2 token fetch failed with error: \(error.localizedDescription)")
 
-                // Show an alert to the user
-                let alertController = UIAlertController(title: "Error", message: "Ошибка получения токена авторизации.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "Ошибка получения токена авторизации. Попробуйте ещё раз.", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default)
                 alertController.addAction(action)
                 self.present(alertController, animated: true, completion: nil)

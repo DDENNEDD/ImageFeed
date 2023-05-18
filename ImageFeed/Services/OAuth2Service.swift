@@ -1,7 +1,6 @@
 import Foundation
 
 final class OAuth2Service {
-
     static let shared = OAuth2Service()
     private let urlSession = URLSession.shared
     private let tokenQueue = DispatchQueue(label: "com.imageFeed-iOS.oauth2.tokenQueue")
@@ -14,57 +13,44 @@ final class OAuth2Service {
         tokenQueue.async { [weak self] in
             guard let self = self else { return }
             if self.lastCode == code {
-                if let token = OAuth2TokenStorage.shared.token {
-                    DispatchQueue.main.async {
-                        completion(.success(token))
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        completion(.success(""))
-                    }
+                let token = OAuth2TokenStorage.shared.token ?? ""
+                DispatchQueue.main.async {
+                    completion(.success(token))
                 }
                 return
             }
+
             self.task?.cancel()
             self.lastCode = code
-
             let request = self.authTokenRequest(code: code)
+
             self.task = self.urlSession.dataTask(with: request) { [weak self] data, response, error in
                 guard let self = self else { return }
+
+                var result: Result<String, Error>
+
                 if let error = error {
-                    DispatchQueue.main.async {
-                        self.lastCode = nil
-                        completion(.failure(error))
+                    result = .failure(error)
+                } else if let httpResponse = response as? HTTPURLResponse, 200 ..< 300 ~= httpResponse.statusCode {
+                    do {
+                        guard let data = data else {
+                            throw NetworkError.urlSessionError
+                        }
+                        let decoder = JSONDecoder()
+                        let body = try decoder.decode(OAuthTokenResponseBody.self, from: data)
+                        let authToken = body.accessToken
+                        OAuth2TokenStorage.shared.token = authToken
+                        result = .success(authToken)
+                    } catch {
+                        result = .failure(error)
                     }
-                    return
+                } else {
+                    result = .failure(NetworkError.urlSessionError)
                 }
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    DispatchQueue.main.async {
-                        self.lastCode = nil
-                        completion(.failure(NetworkError.urlSessionError))
-                    }
-                    return
-                }
-                guard 200 ..< 300 ~= httpResponse.statusCode else {
-                    DispatchQueue.main.async {
-                        self.lastCode = nil
-                        completion(.failure(NetworkError.httpStatusCode(httpResponse.statusCode)))
-                    }
-                    return
-                }
-                do {
-                    let decoder = JSONDecoder()
-                    let body = try decoder.decode(OAuthTokenResponseBody.self, from: data!)
-                    let authToken = body.accessToken
-                    OAuth2TokenStorage.shared.token = authToken
-                    DispatchQueue.main.async {
-                        completion(.success(authToken))
-                    }
-                } catch {
-                    DispatchQueue.main.async {
-                        self.lastCode = nil
-                        completion(.failure(error))
-                    }
+
+                DispatchQueue.main.async {
+                    self.lastCode = nil
+                    completion(result)
                 }
             }
             self.task?.resume()
@@ -77,8 +63,8 @@ final class OAuth2Service {
             "client_secret": secretKey,
             "redirect_uri": redirectURI,
             "code": code,
-            "grant_type": "authorization_code"
-        ]
+            "grant_type": "authorization_code"]
+
         let urlString = baseURL.appendingPathComponent("/oauth/token").absoluteString
         var components = URLComponents(string: urlString)!
         components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
@@ -107,17 +93,4 @@ enum NetworkError: Error {
     case httpStatusCode(Int)
     case urlRequestError(Error)
     case urlSessionError
-}
-
-extension URLSession {
-    func dataTask(with request: URLRequest, completion: @escaping (Result<Data?, Error>) -> Void) -> URLSessionTask {
-        let task = dataTask(with: request) { data, _, error in
-            if let error = error {
-                completion(.failure(NetworkError.urlRequestError(error)))
-                return
-            }
-            completion(.success(data))
-        }
-        return task
-    }
 }
