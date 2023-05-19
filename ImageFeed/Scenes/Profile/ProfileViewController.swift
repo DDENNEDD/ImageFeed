@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 private struct ProfileConstants {
     static let userName = "Имя Пользователя"
@@ -24,6 +25,7 @@ final class ProfileViewController: UIViewController {
         initView()
         addSubview()
         configConstraints()
+        fetchUserProfile()
     }
 
     private func initView() {
@@ -62,11 +64,11 @@ final class ProfileViewController: UIViewController {
     }
 
     private func addSubview() {
-            view.addSubview(userProfileImageView ?? UIImageView())
-            view.addSubview(userNameLabel ?? UILabel())
-            view.addSubview(userLoginLabel ?? UILabel())
-            view.addSubview(userProfileDescriptionLabel ?? UILabel())
-            view.addSubview(userLogOutButton ?? UIButton())
+        view.addSubview(userProfileImageView ?? UIImageView())
+        view.addSubview(userNameLabel ?? UILabel())
+        view.addSubview(userLoginLabel ?? UILabel())
+        view.addSubview(userProfileDescriptionLabel ?? UILabel())
+        view.addSubview(userLogOutButton ?? UIButton())
     }
 
     private func configConstraints() {
@@ -84,6 +86,31 @@ final class ProfileViewController: UIViewController {
             userLogOutButton!.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -26),
             userLogOutButton!.centerYAnchor.constraint(equalTo: userProfileImageView!.centerYAnchor),
             userLogOutButton!.widthAnchor.constraint(equalToConstant: 20),
-            userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)])
+            userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)
+        ])
+    }
+    
+    private func fetchUserProfile() {
+            guard let accessToken = OAuth2TokenStorage.shared.token else {
+                print("Access token not found")
+                return
+            }
+            
+            fetchProfile(accessToken) { [weak self] result in
+                switch result {
+                case .success(let profile):
+                    DispatchQueue.main.async {
+                        self?.updateProfileInformation(profile)
+                    }
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
+            }
+        }
+    
+    private func updateProfileInformation(_ profile: Profile) {
+        userNameLabel?.text = profile.userName
+        userLoginLabel?.text = profile.userLogin
+        userProfileDescriptionLabel?.text = profile.userProfileDescription
     }
 }
