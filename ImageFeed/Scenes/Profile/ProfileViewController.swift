@@ -15,6 +15,8 @@ final class ProfileViewController: UIViewController {
     private var userLoginLabel: UILabel?
     private var userProfileDescriptionLabel: UILabel?
     private var userLogOutButton: UIButton?
+    private let profileService = ProfileService()
+    private var accessToken: String?
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -25,7 +27,7 @@ final class ProfileViewController: UIViewController {
         initView()
         addSubview()
         configConstraints()
-        fetchUserProfile()
+        fetchProfileData()
     }
 
     private func initView() {
@@ -89,28 +91,27 @@ final class ProfileViewController: UIViewController {
             userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)
         ])
     }
-    
-    private func fetchUserProfile() {
-            guard let accessToken = OAuth2TokenStorage.shared.token else {
-                print("Access token not found")
-                return
-            }
-            
-            fetchProfile(accessToken) { [weak self] result in
+
+    private func fetchProfileData() {
+        guard let accessToken = OAuth2TokenStorage.shared.token else {
+            print("No access token found")
+            return
+        }
+
+        profileService.fetchProfile(accessToken) { [weak self] result in
+            DispatchQueue.main.async {
                 switch result {
                 case .success(let profile):
-                    DispatchQueue.main.async {
-                        self?.updateProfileInformation(profile)
-                    }
+                    self?.updateView(with: profile)
                 case .failure(let error):
-                    print("Error: \(error)")
+                    print("Failed to fetch profile: \(error)")
                 }
             }
         }
-    
-    private func updateProfileInformation(_ profile: Profile) {
-        userNameLabel?.text = profile.userName
-        userLoginLabel?.text = profile.userLogin
-        userProfileDescriptionLabel?.text = profile.userProfileDescription
     }
+    private func updateView(with profile: Profile) {
+            userNameLabel?.text = profile.userName
+            userLoginLabel?.text = "@" + profile.userLogin
+            userProfileDescriptionLabel?.text = profile.userProfileDescription
+        }
 }
