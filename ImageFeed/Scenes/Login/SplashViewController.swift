@@ -5,11 +5,12 @@ final class SplashViewController: UIViewController {
     private let showAuthenticationScreenSegueIdentifier = "ShowAuthenticationScreen"
     private let oauth2Service = OAuth2Service()
     private let oauth2TokenStorage = OAuth2TokenStorage()
+    private let profileService = ProfileService()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if oauth2TokenStorage.token != nil {
-            switchToTabBarController()
+        if let token = oauth2TokenStorage.token {
+                    fetchProfileData(token: token)
         } else {
             performSegue(withIdentifier: showAuthenticationScreenSegueIdentifier, sender: nil)
         }
@@ -48,9 +49,9 @@ extension SplashViewController {
 
 extension SplashViewController: AuthViewControllerDelegate {
     func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String) {
-        UIBlockingProgressHUD.show()
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
+            UIBlockingProgressHUD.show()
             self.fetchOAuth2Token(code)
         }
     }
@@ -59,9 +60,8 @@ extension SplashViewController: AuthViewControllerDelegate {
         oauth2Service.fetchOAuth2Token(code) { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success:
-                self.switchToTabBarController()
-                UIBlockingProgressHUD.dismiss()
+            case .success(let token):
+                fetchProfileData(token: token)
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
 
@@ -71,6 +71,25 @@ extension SplashViewController: AuthViewControllerDelegate {
                 let action = UIAlertAction(title: "OK", style: .default)
                 alertController.addAction(action)
                 self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    private func fetchProfileData(token: String) {
+        guard let accessToken = OAuth2TokenStorage.shared.token else {
+            print("No access token found")
+            return
+        }
+
+        profileService.fetchProfile(accessToken) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let profile):
+                    print("Fetched profile: \(profile)")
+                    UIBlockingProgressHUD.dismiss()
+                    self?.switchToTabBarController()
+                case .failure(let error):
+                    print("Failed to fetch profile: \(error)")
+                }
             }
         }
     }

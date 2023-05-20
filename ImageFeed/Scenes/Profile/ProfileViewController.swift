@@ -27,7 +27,6 @@ final class ProfileViewController: UIViewController {
         initView()
         addSubview()
         configConstraints()
-        fetchProfileData()
     }
 
     private func initView() {
@@ -92,26 +91,26 @@ final class ProfileViewController: UIViewController {
         ])
     }
 
-    private func fetchProfileData() {
-        guard let accessToken = OAuth2TokenStorage.shared.token else {
-            print("No access token found")
-            return
-        }
-
-        profileService.fetchProfile(accessToken) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let profile):
-                    self?.updateView(with: profile)
-                case .failure(let error):
-                    print("Failed to fetch profile: \(error)")
-                }
-            }
-        }
-    }
-    private func updateView(with profile: Profile) {
-            userNameLabel?.text = profile.userName
-            userLoginLabel?.text = "@" + profile.userLogin
-            userProfileDescriptionLabel?.text = profile.userProfileDescription
-        }
+//    private func fetchProfileData() {
+//        guard let accessToken = OAuth2TokenStorage.shared.token else {
+//            print("No access token found")
+//            return
+//        }
+//
+//        profileService.fetchProfile(accessToken) { [weak self] result in
+//            DispatchQueue.main.async {
+//                switch result {
+//                case .success(let profile):
+//                    self?.updateView(with: profile)
+//                case .failure(let error):
+//                    print("Failed to fetch profile: \(error)")
+//                }
+//            }
+//        }
+//    }
+//    private func updateView(with profile: Profile) {
+//            userNameLabel?.text = profile.userName
+//            userLoginLabel?.text = "@" + profile.userLogin
+//            userProfileDescriptionLabel?.text = profile.userProfileDescription
+//        }
 }

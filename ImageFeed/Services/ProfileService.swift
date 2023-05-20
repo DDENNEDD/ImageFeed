@@ -28,17 +28,23 @@ final class ProfileService {
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
                 return
             }
 
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(ProfileServiceError.invalidResponse))
+                DispatchQueue.main.async {
+                    completion(.failure(ProfileServiceError.invalidResponse))
+                }
                 return
             }
 
             guard let data = data else {
-                completion(.failure(ProfileServiceError.noDataReceived))
+                DispatchQueue.main.async {
+                    completion(.failure(ProfileServiceError.noDataReceived))
+                }
                 return
             }
 
@@ -50,17 +56,24 @@ final class ProfileService {
                                           userLogin: profileResult.userName,
                                           userProfileDescription: profileResult.bio)
 
-                    completion(.success(profile))
+                    DispatchQueue.main.async {
+                        completion(.success(profile))
+                    }
                 } catch {
-                    completion(.failure(error))
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
                 }
             } else {
-                completion(.failure(ProfileServiceError.serverError(statusCode: httpResponse.statusCode)))
+                DispatchQueue.main.async {
+                    completion(.failure(ProfileServiceError.serverError(statusCode: httpResponse.statusCode)))
+                }
             }
         }
 
         task.resume()
     }
+
 }
 
 struct Profile {
