@@ -15,7 +15,7 @@ final class ProfileViewController: UIViewController {
     private var userLoginLabel: UILabel?
     private var userProfileDescriptionLabel: UILabel?
     private var userLogOutButton: UIButton?
-    private let profileService = ProfileService()
+    private let profileService = ProfileService.shared
     private var accessToken: String?
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,6 +27,8 @@ final class ProfileViewController: UIViewController {
         initView()
         addSubview()
         configConstraints()
+        updateView()
+        print(profileService.profile?.userName)
     }
 
     private func initView() {
@@ -108,9 +110,9 @@ final class ProfileViewController: UIViewController {
 //            }
 //        }
 //    }
-//    private func updateView(with profile: Profile) {
-//            userNameLabel?.text = profile.userName
-//            userLoginLabel?.text = "@" + profile.userLogin
-//            userProfileDescriptionLabel?.text = profile.userProfileDescription
-//        }
+    private func updateView() {
+        userNameLabel?.text = profileService.profile?.name
+        userLoginLabel?.text = profileService.profile?.loginName
+        userProfileDescriptionLabel?.text = profileService.profile?.bio
+        }
 }
