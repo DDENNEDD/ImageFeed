@@ -92,24 +92,7 @@ final class ProfileViewController: UIViewController {
             userLogOutButton!.heightAnchor.constraint(equalToConstant: 22)
         ])
     }
-
-//    private func fetchProfileData() {
-//        guard let accessToken = OAuth2TokenStorage.shared.token else {
-//            print("No access token found")
-//            return
-//        }
-//
-//        profileService.fetchProfile(accessToken) { [weak self] result in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .success(let profile):
-//                    self?.updateView(with: profile)
-//                case .failure(let error):
-//                    print("Failed to fetch profile: \(error)")
-//                }
-//            }
-//        }
-//    }
+    
     private func updateView() {
         userNameLabel?.text = profileService.profile?.name
         userLoginLabel?.text = profileService.profile?.loginName
