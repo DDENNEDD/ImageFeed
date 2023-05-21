@@ -104,7 +104,7 @@ import Kingfisher
 
 protocol ProfileViewControllerProtocol: AnyObject {
     var presenter: ProfilePresenterProtocol? { get set }
-    func makeUI()
+    func configUI()
     func showAlert()
     var profileName: UILabel { get set }
     var profileContact: UILabel { get set }
@@ -129,17 +129,17 @@ final class ProfileViewController: UIViewController, ProfileViewControllerProtoc
         
         presenter = ProfilePresenter()
         presenter?.view = self
-        presenter?.setUI()
+        presenter?.setUserProfileUI()
         
         
         profileImageServiceObserver = NotificationCenter.default.addObserver(forName: ProfileImageService.DidChangeNotification, object: nil, queue: .main) {[weak self] _ in
             guard let self = self else { return }
-            self.updateAvatar()
+            self.updateUserProfileImage()
         }
-        updateAvatar()
+        updateUserProfileImage()
     }
     
-    func makeUI() {
+    func configUI() {
         view.backgroundColor = .ypBlack
         
         let allViewOnScreen = [profilePhoto, profileName, profileContact, profileAbout, logOutButton]
@@ -183,7 +183,7 @@ final class ProfileViewController: UIViewController, ProfileViewControllerProtoc
 }
 
 extension ProfileViewController {
-    func updateAvatar() {
+    func updateUserProfileImage() {
         guard let url = presenter?.getUrlForProfileImage() else { return  }
         let processor = RoundCornerImageProcessor(cornerRadius: 50, backgroundColor: .clear)
         profilePhoto.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])

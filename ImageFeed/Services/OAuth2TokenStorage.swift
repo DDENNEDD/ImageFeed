@@ -17,11 +17,11 @@ final class OAuth2TokenStorage {
             }
         }
     }
-    
+
     private enum Keys: String {
         case token
     }
-    
+
     func removeToken() {
         KeychainWrapper.standard.removeObject(forKey: Keys.token.rawValue)
     }
