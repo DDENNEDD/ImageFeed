@@ -18,7 +18,6 @@
 		BF12F79029798B4600DDF1DA /* ImageFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F78F29798B4600DDF1DA /* ImageFeedUITests.swift */; };
 		BF12F79229798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */; };
 		BF2CDF972A19B35000C70E44 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDF962A19B35000C70E44 /* NetworkClient.swift */; };
-		BF2CDF992A19B40B00C70E44 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDF982A19B40B00C70E44 /* Models.swift */; };
 		BF2CDFA12A19CDD100C70E44 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */; };
 		BF2CDFA32A19CE0100C70E44 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDFA22A19CE0100C70E44 /* AuthHelper.swift */; };
 		BF2CDFA52A19CE4900C70E44 /* AuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDFA42A19CE4900C70E44 /* AuthConfiguration.swift */; };
@@ -79,7 +78,6 @@
 		BF12F78F29798B4600DDF1DA /* ImageFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITests.swift; sourceTree = "<group>"; };
 		BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF2CDF962A19B35000C70E44 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		BF2CDF982A19B40B00C70E44 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		BF2CDFA22A19CE0100C70E44 /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
 		BF2CDFA42A19CE4900C70E44 /* AuthConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConfiguration.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 		BFDCA48129EDEC2100B59411 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF2CDF982A19B40B00C70E44 /* Models.swift */,
 				BF2CDFAC2A19F95600C70E44 /* Profile.swift */,
 				BF2CDFAE2A19F9A000C70E44 /* Photo.swift */,
 				BF2CDFB02A19F9D700C70E44 /* URLs.swift */,
@@ -514,7 +511,6 @@
 				BF12F77129798B4500DDF1DA /* SceneDelegate.swift in Sources */,
 				BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */,
 				BF60617429B3F4CC00070B98 /* OAuth2TokenStorage.swift in Sources */,
-				BF2CDF992A19B40B00C70E44 /* Models.swift in Sources */,
 				BF2CDFA92A19DCAD00C70E44 /* ProfilePresenter.swift in Sources */,
 				BF2CDFA72A19DAA000C70E44 /* ProfileImageService.swift in Sources */,
 				BF2CDFA52A19CE4900C70E44 /* AuthConfiguration.swift in Sources */,
