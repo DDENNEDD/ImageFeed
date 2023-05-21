@@ -8,7 +8,7 @@ struct PhotoResult: Decodable {
     let welcomeDescription: String?
     let urls: UrlsResult
     let isLiked: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case width = "width"
