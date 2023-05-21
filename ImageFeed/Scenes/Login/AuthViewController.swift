@@ -3,7 +3,6 @@ import UIKit
 
 final class AuthViewController: UIViewController {
 
-
     weak var delegate: AuthViewControllerDelegate?
     private let auth_screen_logo = UIImageView()
     private let button = UIButton()
@@ -13,7 +12,6 @@ final class AuthViewController: UIViewController {
         super.viewDidLoad()
         makeUI()
     }
-
 
     private func makeUI() {
         view.backgroundColor = .ypBlack
@@ -43,6 +41,7 @@ final class AuthViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
+
     @objc private func buttonEntrance() {
         if let viewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "WebViewViewController") as? WebViewViewController {
             let authHelper = AuthHelper()
