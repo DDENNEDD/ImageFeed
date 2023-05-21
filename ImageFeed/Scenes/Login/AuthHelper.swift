@@ -6,18 +6,16 @@ protocol AuthHelperProtocol {
 }
 
 final class AuthHelper: AuthHelperProtocol {
-    
     let configuration: AuthConfiguration
-    
     init(configuration: AuthConfiguration = .standard) {
         self.configuration = configuration
     }
-    
+
     func authRequest() -> URLRequest {
         let url = authURL()
         return URLRequest(url: url)
     }
-    
+
     func authURL() -> URL {
         var urlComponents = URLComponents(string: configuration.authURLString)!
         urlComponents.queryItems = [
@@ -28,14 +26,13 @@ final class AuthHelper: AuthHelperProtocol {
         ]
         return urlComponents.url!
     }
-    
+
     func code(from url: URL) -> String? {
         if
             let urlComponents = URLComponents(string: url.absoluteString),
             urlComponents.path == "/oauth/authorize/native",
             let items = urlComponents.queryItems,
-            let codeItem = items.first(where: {$0.name == "code"})
-        {
+            let codeItem = items.first(where: {$0.name == "code"}) {
             return codeItem.value
         } else {
             return nil

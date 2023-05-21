@@ -2,18 +2,17 @@ import UIKit
 import ProgressHUD
 
 final class SplashViewController: UIViewController {
-    
     private let oAuth2Service = OAuth2Service()
     private let oAuth2TokenStorage = OAuth2TokenStorage()
     private let profileService = ProfileService.shared
     private let profileImageService = ProfileImageService.shared
     private let authViewController = AuthViewController()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         makeUI()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard let token = oAuth2TokenStorage.token else {
@@ -23,20 +22,20 @@ final class SplashViewController: UIViewController {
         }
         fetchProfile(token: token)
     }
-    
+
     private func switchToTabBarController() {
         guard let window = UIApplication.shared.windows.first else { return assertionFailure("Invalid Configuration") }
         let tabBarController = UIStoryboard(name: "Main", bundle: .main)
             .instantiateViewController(withIdentifier: "TabBarViewController")
         window.rootViewController = tabBarController
     }
-    
+
     private func makeUI() {
         let screenLogo = UIImageView()
         screenLogo.image = UIImage(named: "SplashScreenLogo")
         view.backgroundColor = .ypBlack
         view.addSubview(screenLogo)
-        
+    
         NSLayoutConstraint.activate([
             screenLogo.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             screenLogo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
@@ -45,6 +44,7 @@ final class SplashViewController: UIViewController {
 }
 
 extension SplashViewController: AuthViewControllerDelegate {
+    
     func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String) {
         UIBlockingProgressHUD.show()
         oAuth2Service.fetchOAuth2Token(code, completion: {[weak self] result in
@@ -61,7 +61,7 @@ extension SplashViewController: AuthViewControllerDelegate {
             }
         })
     }
-    
+
     private func fetchProfile(token: String) {
         profileService.fetchProfile(token, completion: {[weak self] result in
             guard let self = self else { return }
@@ -78,7 +78,7 @@ extension SplashViewController: AuthViewControllerDelegate {
             }
         })
     }
-    
+
     private func fetchProfileImage(username: String) {
         profileImageService.fetchProfileImageURL(userName: username, {[weak self] result in
             guard let self = self else { return }

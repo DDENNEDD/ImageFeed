@@ -1,7 +1,7 @@
 import Foundation
 
 final class OAuth2Service {
-    
+
     private let urlSession = URLSession.shared
     private var lastCode: String?
     private var task: URLSessionTask?
@@ -14,7 +14,7 @@ final class OAuth2Service {
             OAuth2TokenStorage().token = newValue
         }
     }
-    
+
     func fetchOAuth2Token(_ code: String, completion: @escaping (Result<String, Error>) -> Void) {
         assert(Thread.isMainThread)
         if lastCode == code { return }
@@ -51,7 +51,7 @@ extension OAuth2Service {
             }
         })
     }
-    
+
     private func authTokenRequest(code: String) -> URLRequest {
         URLRequest.makeHTTPRequest(path: "/oauth/token"
                                    + "?client_id=\(AccessKey)"
@@ -62,13 +62,13 @@ extension OAuth2Service {
                                    httpMethod: "POST",
                                    baseURL: URL(string: "https://unsplash.com")!)
     }
-    
+
     private struct OAuthTokenResponseBody: Decodable {
         let accessToken: String
         let tokenType: String
         let scope: String
         let createdAt: Int
-        
+
         enum CodingKeys: String, CodingKey {
             case accessToken = "access_token"
             case tokenType = "token_type"

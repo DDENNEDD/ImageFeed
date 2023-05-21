@@ -138,26 +138,20 @@ final class ProfileViewController: UIViewController, ProfileViewControllerProtoc
         }
         updateUserProfileImage()
     }
-    
+
     func configUI() {
         view.backgroundColor = .ypBlack
-        
         let allViewOnScreen = [profilePhoto, profileName, profileContact, profileAbout, logOutButton]
         allViewOnScreen.forEach {view.addSubview($0)}
         allViewOnScreen.forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
-        
-        
         profileName.font = UIFont.boldSystemFont(ofSize: 23)
         profileName.textColor = .ypWhite
-        
         profileContact.font = UIFont.systemFont(ofSize: 13)
         profileContact.textColor = .ypGray
-        
         profileAbout.font = UIFont.systemFont(ofSize: 13)
         profileAbout.textColor = .ypWhite
-        
         logOutButton.tintColor = .ypRed
-        
+
         NSLayoutConstraint.activate([
             profilePhoto.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
             profilePhoto.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
@@ -175,7 +169,7 @@ final class ProfileViewController: UIViewController, ProfileViewControllerProtoc
             logOutButton.heightAnchor.constraint(equalToConstant: 22)
         ])
     }
-    
+
     @objc
     private func didTapButton() {
         showAlert()
@@ -189,7 +183,7 @@ extension ProfileViewController {
         profilePhoto.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])
         profilePhoto.kf.indicatorType = .activity
     }
-    
+
     func showAlert() {
         let alert = UIAlertController(title: "Пока, пока!", message: "Уверены что хотите выйти?", preferredStyle: .alert)
         let actionYes = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
@@ -202,7 +196,6 @@ extension ProfileViewController {
         alert.addAction(actionYes)
         alert.addAction(actionNo)
         present(alert, animated: true)
-        
         alert.view.accessibilityIdentifier = "exit"
     }
 }

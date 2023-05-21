@@ -5,13 +5,12 @@ struct ProfileResult: Decodable {
     let firstName: String
     let lastName: String
     let bio: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case userName = "username"
         case firstName = "first_name"
         case lastName = "last_name"
         case bio = "bio"
-
     }
 }
 
@@ -24,8 +23,7 @@ struct Profile {
 
 struct UserResult: Codable {
     let profileImage: ProfileImageURL
-    
-    enum CodingKeys: String, CodingKey{
+    enum CodingKeys: String, CodingKey {
         case profileImage = "profile_image"
     }
 }
