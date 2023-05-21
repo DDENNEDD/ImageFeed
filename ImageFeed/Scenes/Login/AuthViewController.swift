@@ -2,19 +2,19 @@
 import UIKit
 
 final class AuthViewController: UIViewController {
-    
-    
+
+
     weak var delegate: AuthViewControllerDelegate?
     private let auth_screen_logo = UIImageView()
     private let button = UIButton()
     private let showWebView = "ShowWebView"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         makeUI()
     }
-    
-    
+
+
     private func makeUI() {
         view.backgroundColor = .ypBlack
         auth_screen_logo.image = UIImage(named: "AuthScreenLogo")
@@ -22,9 +22,9 @@ final class AuthViewController: UIViewController {
         view.addSubview(button)
         auth_screen_logo.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+
         button.backgroundColor = .ypWhite
-        
+
         button.tintColor = .ypWhite
         button.layer.cornerRadius = 16
         button.setTitleColor(.ypBlack, for: .normal)
@@ -32,7 +32,7 @@ final class AuthViewController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         button.addTarget(self, action: #selector(buttonEntrance), for: .touchUpInside)
         button.accessibilityIdentifier = "Authenticate"
-        
+
         NSLayoutConstraint.activate([
             auth_screen_logo.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             auth_screen_logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
