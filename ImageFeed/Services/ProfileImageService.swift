@@ -1,14 +1,14 @@
 import Foundation
 
 final class ProfileImageService {
-    
+
     private let oAuth2TokenStorage = OAuth2TokenStorage()
     static let shared = ProfileImageService()
     private (set) var userProfileImageSmallURL: String?
     private let urlSession = URLSession.shared
     private var task: URLSessionTask?
     static let DidChangeNotification = Notification.Name("ProfileImageProviderDidChange")
-    
+
     func fetchProfileImageURL(userName: String, _ completion: @escaping (Result<String, Error>) -> Void) {
         assert(Thread.isMainThread)
         task?.cancel()

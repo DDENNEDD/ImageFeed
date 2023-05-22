@@ -22,7 +22,9 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
         presenter?.viewDidLoad()
         webView.navigationDelegate = self
         webView.accessibilityIdentifier = "UnsplashWebView"
-        estimatedProgressObservation = webView.observe(\.estimatedProgress, options: [], changeHandler: { [weak self] _, _ in
+        estimatedProgressObservation = webView.observe(\.estimatedProgress,
+                                                        options: [],
+                                                        changeHandler: { [weak self] _, _ in
             guard let self = self else { return }
             self.presenter?.didUpdateProgressValue(self.webView.estimatedProgress)
         })
@@ -46,7 +48,8 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
 
     static func clean() {
         HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
-        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(), completionHandler: { records in
+        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(),
+                                                      completionHandler: { records in
             records.forEach({ record in
                 WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
             })
@@ -80,6 +83,6 @@ extension WebViewViewController: WKNavigationDelegate {
 }
 
 protocol WebViewViewControllerDelegate: AnyObject {
-    func  webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String)
-    func webViewViewControllerDidCancel(_ vc: WebViewViewController)
+    func  webViewViewController(_ viewController: WebViewViewController, didAuthenticateWithCode code: String)
+    func webViewViewControllerDidCancel(_ viewController: WebViewViewController)
 }

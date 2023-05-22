@@ -7,6 +7,9 @@ final class SplashViewController: UIViewController {
     private let profileService = ProfileService.shared
     private let profileImageService = ProfileImageService.shared
     private let authViewController = AuthViewController()
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,7 @@ final class SplashViewController: UIViewController {
         screenLogo.image = UIImage(named: "SplashScreenLogo")
         view.backgroundColor = .ypBlack
         view.addSubview(screenLogo)
-    
+
         NSLayoutConstraint.activate([
             screenLogo.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             screenLogo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
@@ -44,8 +47,8 @@ final class SplashViewController: UIViewController {
 }
 
 extension SplashViewController: AuthViewControllerDelegate {
-    
-    func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String) {
+
+    func authViewController(_ viewController: AuthViewController, didAuthenticateWithCode code: String) {
         UIBlockingProgressHUD.show()
         oAuth2Service.fetchOAuth2Token(code, completion: {[weak self] result in
             DispatchQueue.main.async { [weak self] in
@@ -83,7 +86,7 @@ extension SplashViewController: AuthViewControllerDelegate {
         profileImageService.fetchProfileImageURL(userName: username, {[weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success(_):
+            case .success:
                 break
             case .failure(let error):
                 print(error.localizedDescription)
@@ -95,7 +98,9 @@ extension SplashViewController: AuthViewControllerDelegate {
 
 extension SplashViewController {
     func showAllert() {
-        let alert = UIAlertController(title: "Что-то пошло не так(", message: "Не удалось войти в систему", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Что-то пошло не так",
+                                      message: "Не удалось войти в систему",
+                                      preferredStyle: .alert)
         let action = UIAlertAction(title: "ОК", style: .default, handler: {_ in
             alert.dismiss(animated: true)
         })

@@ -8,34 +8,41 @@ protocol ProfileViewControllerProtocol: AnyObject {
     var profileName: UILabel { get set }
     var profileContact: UILabel { get set }
     var profileAbout: UILabel { get set }
-    
+
 }
 
 final class ProfileViewController: UIViewController, ProfileViewControllerProtocol {
-    
+
     var presenter: ProfilePresenterProtocol?
     private var profileImageServiceObserver: NSObjectProtocol?
-    
+
     private let profilePhoto = UIImageView()
     var profileName = UILabel()
     var profileContact = UILabel()
     var profileAbout = UILabel()
-    private let logOutButton = UIButton.systemButton(with: UIImage(named: "iPadAndArrowForward")!, target: nil, action: #selector(Self.didTapButton))
-    
+    private let logOutButton = UIButton.systemButton(with: UIImage(named: "iPadAndArrowForward")!,
+                                                     target: nil,
+                                                     action: #selector(Self.didTapButton))
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.accessibilityIdentifier = "logoutButton"
-        
         presenter = ProfilePresenter()
         presenter?.view = self
         presenter?.setUserProfileUI()
-        
-        
-        profileImageServiceObserver = NotificationCenter.default.addObserver(forName: ProfileImageService.DidChangeNotification, object: nil, queue: .main) {[weak self] _ in
-            guard let self = self else { return }
-            self.updateUserProfileImage()
-        }
+
+        profileImageServiceObserver = NotificationCenter.default.addObserver(
+            forName: ProfileImageService.DidChangeNotification,
+            object: nil,
+            queue: .main) {[weak self] _ in
+                guard let self = self else { return }
+                self.updateUserProfileImage()
+            }
         updateUserProfileImage()
+
     }
 
     func configUI() {
@@ -79,12 +86,17 @@ extension ProfileViewController {
     func updateUserProfileImage() {
         guard let url = presenter?.getUrlForProfileImage() else { return  }
         let processor = RoundCornerImageProcessor(cornerRadius: 50, backgroundColor: .clear)
-        profilePhoto.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])
+        profilePhoto.kf.setImage(with: url,
+                                 placeholder: UIImage(named: "placeholder"),
+                                 options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])
         profilePhoto.kf.indicatorType = .activity
     }
 
     func showAlert() {
-        let alert = UIAlertController(title: "Пока, пока!", message: "Уверены что хотите выйти?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Пока, пока!",
+                                      message: "Уверены что хотите выйти?",
+                                      preferredStyle: .alert)
+
         let actionYes = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
             guard let self = self else { return }
             self.presenter?.exit()
@@ -98,4 +110,3 @@ extension ProfileViewController {
         alert.view.accessibilityIdentifier = "exit"
     }
 }
-

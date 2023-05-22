@@ -1,7 +1,7 @@
 import Foundation
 
 extension URLRequest {
-    static func makeHTTPRequest(path: String, httpMethod: String, baseURL: URL = DefaultBaseURL) -> URLRequest {
+    static func makeHTTPRequest(path: String, httpMethod: String, baseURL: URL = unsplashDefaultBaseURL) -> URLRequest {
         var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
         request.httpMethod = httpMethod
         return request
@@ -15,7 +15,8 @@ private enum NetworkError: Error {
 }
 
 extension URLSession {
-    func objectTask<T: Decodable>(for request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTask {
+    func objectTask<T: Decodable>(for request: URLRequest,
+                                  completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTask {
         let fullfillCompletion: (Result<T, Error>) -> Void = { result in
             DispatchQueue.main.async {
                 completion(result)
@@ -34,7 +35,7 @@ extension URLSession {
                 } else {
                     fullfillCompletion(.failure(NetworkError.httpStatusCode(statusCode)))
                 }
-            }else if let error {
+            } else if let error {
                 fullfillCompletion(.failure(NetworkError.urlRequestError(error)))
             } else {
                 fullfillCompletion(.failure(NetworkError.urlSessionError))

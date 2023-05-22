@@ -1,25 +1,28 @@
-//swiftlint: disable all
 import Foundation
 
 class ProfileService {
-    
+
     private var task: URLSessionTask?
     private let urlSession = URLSession.shared
     static let shared = ProfileService()
     private (set) var profile: Profile?
-    
-    private func convertToProfile(_ ProfileResult: ProfileResult) -> Profile {
-        return Profile(userName: ProfileResult.userName, name: "\(ProfileResult.firstName) \(ProfileResult.lastName)", loginName: "@\(ProfileResult.userName)", bio: ProfileResult.bio ?? "")
+
+    private func convertToProfile(_ profileResult: ProfileResult) -> Profile {
+        return Profile(userName: profileResult.userName,
+                       name: "\(profileResult.firstName) \(profileResult.lastName)",
+                       loginName: "@\(profileResult.userName)",
+                       bio: profileResult.bio ?? "")
     }
-    
+
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void) {
         assert(Thread.isMainThread)
         task?.cancel()
         var request = URLRequest.makeHTTPRequest(path: profilePath, httpMethod: "GET")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        let task = urlSession.objectTask(for: request, completion: {[weak self] (result: Result<ProfileResult, Error>) in
+        let task = urlSession.objectTask(for: request,
+                                         completion: {[weak self] (result: Result<ProfileResult, Error>) in
             guard let self = self else { return }
-            switch result{
+            switch result {
             case .success(let currentUser):
                 let newProfile = self.convertToProfile(currentUser)
                 self.profile = newProfile
@@ -32,4 +35,3 @@ class ProfileService {
         task.resume()
     }
 }
-
