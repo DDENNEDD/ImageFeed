@@ -131,7 +131,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="W0u-Ah-f5V"/>
                     <connections>
-                        <segue destination="Rf6-3M-Xev" kind="presentation" id="xeb-IY-AqQ"/>
+                        <segue destination="Rf6-3M-Xev" kind="presentation" identifier="AuthWebSegues" id="xeb-IY-AqQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7C-OH-gaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

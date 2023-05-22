@@ -187,7 +187,6 @@
 			children = (
 				BF564266299464C00078DD4C /* ImagesListCell.swift */,
 				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
-				BF2CDFAA2A19E49E00C70E44 /* TabBarController.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -234,6 +233,7 @@
 		BFDCA47E29EDEB4900B59411 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BF2CDFAA2A19E49E00C70E44 /* TabBarController.swift */,
 				BFDCA48229EDED1000B59411 /* Profile */,
 				BFDCA48029EDEB9A00B59411 /* ImageList */,
 				BFDCA47F29EDEB5900B59411 /* Login */,
