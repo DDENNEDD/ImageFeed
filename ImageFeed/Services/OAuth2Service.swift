@@ -7,7 +7,7 @@ final class OAuth2Service {
     private var task: URLSessionTask?
     private (set) var authToken: String? {
         get {
-            return OAuth2TokenStorage().token
+            OAuth2TokenStorage().token
         }
         set {
             guard let newValue = newValue else { return }
@@ -42,7 +42,7 @@ final class OAuth2Service {
 extension OAuth2Service {
     private func object(for request: URLRequest,
                         completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) -> URLSessionTask {
-        return urlSession.objectTask(for: request, completion: { (result: Result<OAuthTokenResponseBody, Error>) in
+        urlSession.objectTask(for: request, completion: { (result: Result<OAuthTokenResponseBody, Error>) in
             switch result {
             case .success(let body):
                 completion(.success(body))

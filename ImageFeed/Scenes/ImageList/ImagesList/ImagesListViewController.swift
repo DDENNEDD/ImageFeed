@@ -21,17 +21,17 @@ final class ImagesListViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == showSingleImageSegueIdentifier {
-                // swiftlint:disable force_cast
-                let viewController = segue.destination as! SingleImageViewController
-                let indexPath = sender as! IndexPath
-                // swiftlint:enable force_cast
+        if segue.identifier == showSingleImageSegueIdentifier {
+            if let viewController = segue.destination as? SingleImageViewController,
+               let indexPath = sender as? IndexPath {
                 let image = UIImage(named: photosName[indexPath.row])
                 viewController.image = image
-            } else {
-                super.prepare(for: segue, sender: sender)
             }
+        } else {
+            super.prepare(for: segue, sender: sender)
         }
+    }
+
 }
 
 extension ImagesListViewController: UITableViewDataSource {

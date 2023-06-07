@@ -39,6 +39,7 @@
 		BFC245AB29BE84220055646C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFC245AA29BE84220055646C /* Kingfisher */; };
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
+		BFD9EA672A1D2D6D008386E6 /* ImagesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */; };
 		BFDCA48629EDEECB00B59411 /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */; };
 		BFDCA48829EDEEDF00B59411 /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48729EDEEDF00B59411 /* YSDisplay-Medium.ttf */; };
 		BFDCA48A29EDEEEB00B59411 /* YSDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48929EDEEEB00B59411 /* YSDisplay-Regular.ttf */; };
@@ -97,6 +98,7 @@
 		BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
+		BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListService.swift; sourceTree = "<group>"; };
 		BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		BFDCA48729EDEEDF00B59411 /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		BFDCA48929EDEEEB00B59411 /* YSDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				BF564266299464C00078DD4C /* ImagesListCell.swift */,
 				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
+				BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD9EA672A1D2D6D008386E6 /* ImagesListService.swift in Sources */,
 				BF2CDFB12A19F9D700C70E44 /* URLs.swift in Sources */,
 				BF2CDFAF2A19F9A000C70E44 /* Photo.swift in Sources */,
 				BF10AD8229AE4F34003765F2 /* WebViewViewController.swift in Sources */,

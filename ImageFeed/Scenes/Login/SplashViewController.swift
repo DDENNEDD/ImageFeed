@@ -60,7 +60,7 @@ extension SplashViewController: AuthViewControllerDelegate {
                 case .failure(let error):
                     UIBlockingProgressHUD.dismiss()
                     print(error.localizedDescription)
-                    self.showAllert()
+                    self.showAlert()
                 }
             }
         })
@@ -78,7 +78,7 @@ extension SplashViewController: AuthViewControllerDelegate {
             case .failure(let error):
                 print(error.localizedDescription)
                 UIBlockingProgressHUD.dismiss()
-                self.showAllert()
+                self.showAlert()
             }
         })
     }
@@ -91,14 +91,14 @@ extension SplashViewController: AuthViewControllerDelegate {
                 break
             case .failure(let error):
                 print(error.localizedDescription)
-                self.showAllert()
+                self.showAlert()
             }
         })
     }
 }
 
 extension SplashViewController {
-    func showAllert() {
+    func showAlert() {
         let alert = UIAlertController(title: "Что-то пошло не так",
                                       message: "Не удалось войти в систему",
                                       preferredStyle: .alert)

@@ -39,11 +39,11 @@ struct AuthConfiguration {
     }
 
     static var standard: AuthConfiguration {
-        return AuthConfiguration(accessKey: unsplashAccessKey,
-                                 secretKey: unsplashSecretKey,
-                                 redirectURI: unsplashRedirectURI,
-                                 accessScope: unsplashAccessScope,
-                                 defaultBaseURL: unsplashDefaultBaseURL,
-                                 authURLString: unsplashAuthorizeURLString)
+        AuthConfiguration(accessKey: unsplashAccessKey,
+                secretKey: unsplashSecretKey,
+                redirectURI: unsplashRedirectURI,
+                accessScope: unsplashAccessScope,
+                defaultBaseURL: unsplashDefaultBaseURL,
+                authURLString: unsplashAuthorizeURLString)
     }
 }
