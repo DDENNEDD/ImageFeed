@@ -1,5 +1,6 @@
 // swiftlint: disable all
 import UIKit
+import Kingfisher
 
 final class SingleImageViewController: UIViewController {
     
@@ -26,10 +27,11 @@ final class SingleImageViewController: UIViewController {
     }
     
     @IBAction private func didTapShareButton(_ sender: Any) {
-        let activityViewController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
-        activityViewController.view.backgroundColor = .ypBlack
-               activityViewController.overrideUserInterfaceStyle = .dark
-        present(activityViewController, animated: true)
+        guard let image = imageView.image else { return }
+                let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                activityViewController.view.backgroundColor = .ypBlack
+                activityViewController.overrideUserInterfaceStyle = .dark
+                present(activityViewController, animated: true)
     }
     
     func setImage(url: URL?) {
@@ -41,6 +43,7 @@ final class SingleImageViewController: UIViewController {
             switch result {
             case .success(let resultImage):
                 self.rescaleAndCenterImageInScrollView(image: resultImage.image)
+                self.imageView.contentMode = .scaleAspectFill
             case .failure(_):
                 self.showError()
             }
@@ -73,16 +76,15 @@ extension SingleImageViewController: UIScrollViewDelegate {
 
 extension SingleImageViewController {
     private func showError() {
-        let alert = UIAlertController(title: nil, message: "Что-то пошло не так. Попробовать ещё раз?", preferredStyle: .alert)
-        let dissmissAction = UIAlertAction(title: "Не надо", style: .default) {_ in
-            alert.dismiss(animated: true)
+            let alert = UIAlertController(title: nil, message: "Что-то пошло не так. Попробовать ещё раз?", preferredStyle: .alert)
+            let dissmissAction = UIAlertAction(title: "Не надо", style: .default) { _ in
+                alert.dismiss(animated: true)
+            }
+            let repeatAction = UIAlertAction(title: "Повторить", style: .default) { [weak self] _ in
+                self?.setImage(url: self?.imageURL)
+            }
+            alert.addAction(dissmissAction)
+            alert.addAction(repeatAction)
+            present(alert, animated: true)
         }
-        let repeatAction = UIAlertAction(title: "Повторить", style: .default) {[weak self] _ in
-            guard let self = self else { return }
-            self.setImage(url: self.imageURL)
-        }
-        alert.addAction(dissmissAction)
-        alert.addAction(repeatAction)
-        present(alert, animated: true)
-    }
 }
