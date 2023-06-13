@@ -1,8 +1,5 @@
-//
-//  ImageListCellProtocol.swift
-//  ImageFeed
-//
-//  Created by Денис Беляков on 13.06.2023.
-//
-
 import Foundation
+
+protocol ImagesListCellDelegate: AnyObject {
+    func imageListCellDidTapLike(_ cell: ImagesListCell)
+}

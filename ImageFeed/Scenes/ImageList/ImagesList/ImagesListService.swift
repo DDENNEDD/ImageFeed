@@ -1,7 +1,7 @@
 import Foundation
 
 final class ImagesListService {
-    
+
     private (set) var photos: [Photo] = []
     private let urlSession = URLSession.shared
     private var nextPage = 0
@@ -70,8 +70,10 @@ final class ImagesListService {
         self.task = task
         task.resume()
     }
-    
-    func changeLike(photoId: String, isLike: Bool, _ completion: @escaping (Result<Void, Error>) -> Void) {
+
+    func changeLike(photoId: String,
+                    isLike: Bool,
+                    _ completion: @escaping (Result<Void, Error>) -> Void) {
         assert(Thread.isMainThread)
         likeTak?.cancel()
         if !isLike {
@@ -117,4 +119,3 @@ final class ImagesListService {
         }
     }
 }
-

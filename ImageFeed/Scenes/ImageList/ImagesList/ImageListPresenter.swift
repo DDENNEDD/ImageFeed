@@ -1,6 +1,5 @@
 import Foundation
 
-
 protocol ImageListPresenterProtocol {
     var view: ImagesListViewControllerProtocol? { get set }
     var imagesListService: ImagesListService { get }
