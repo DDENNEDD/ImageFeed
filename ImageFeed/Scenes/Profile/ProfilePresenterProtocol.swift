@@ -1,8 +1,9 @@
-//
-//  ProfilePresenterProtocol.swift
-//  ImageFeed
-//
-//  Created by Денис Беляков on 13.06.2023.
-//
+import UIKit
 
-import Foundation
+protocol ProfilePresenterProtocol {
+    var view: ProfileViewControllerProtocol? { get set }
+    func exit()
+    func setUserProfileUI()
+    func getUrlForProfileImage() -> URL?
+    var profileService: ProfileService { get }
+}

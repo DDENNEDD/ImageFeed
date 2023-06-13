@@ -1,8 +1,11 @@
-//
-//  ProfileViewControllerProtocol.swift
-//  ImageFeed
-//
-//  Created by Денис Беляков on 13.06.2023.
-//
+import UIKit
 
-import Foundation
+protocol ProfileViewControllerProtocol: AnyObject {
+    var presenter: ProfilePresenterProtocol? { get set }
+    func configUI()
+    func showAlert()
+    var profileName: UILabel { get set }
+    var profileContact: UILabel { get set }
+    var profileAbout: UILabel { get set }
+
+}

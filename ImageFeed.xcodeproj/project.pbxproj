@@ -38,6 +38,8 @@
 		BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9399502996ACEC006115E4 /* ProfileViewController.swift */; };
 		BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93995229995446006115E4 /* SingleImageViewController.swift */; };
 		BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97447129AE487300BB09DB /* AuthViewController.swift */; };
+		BFA5DF582A388857000C3073 /* ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5DF572A388857000C3073 /* ProfileViewControllerProtocol.swift */; };
+		BFA5DF5A2A3888A9000C3073 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5DF592A3888A9000C3073 /* ProfilePresenterProtocol.swift */; };
 		BFC245A629BD32A50055646C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC245A529BD32A50055646C /* ProfileService.swift */; };
 		BFC245A829BE73F50055646C /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */; };
 		BFC245AB29BE84220055646C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFC245AA29BE84220055646C /* Kingfisher */; };
@@ -102,6 +104,8 @@
 		BF9399502996ACEC006115E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF93995229995446006115E4 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		BF97447129AE487300BB09DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		BFA5DF572A388857000C3073 /* ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerProtocol.swift; sourceTree = "<group>"; };
+		BFA5DF592A3888A9000C3073 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterProtocol.swift; sourceTree = "<group>"; };
 		BFC245A529BD32A50055646C /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 			children = (
 				BF9399502996ACEC006115E4 /* ProfileViewController.swift */,
 				BF2CDFA82A19DCAD00C70E44 /* ProfilePresenter.swift */,
+				BFA5DF572A388857000C3073 /* ProfileViewControllerProtocol.swift */,
+				BFA5DF592A3888A9000C3073 /* ProfilePresenterProtocol.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -483,11 +489,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD9EA672A1D2D6D008386E6 /* ImagesListService.swift in Sources */,
+				BFA5DF5A2A3888A9000C3073 /* ProfilePresenterProtocol.swift in Sources */,
 				BF2CDFB12A19F9D700C70E44 /* URLs.swift in Sources */,
 				BF2769032A387F4F00FEC62A /* ImageListViewControllerProtocol.swift in Sources */,
 				BF2CDFAF2A19F9A000C70E44 /* Photo.swift in Sources */,
 				BF10AD8229AE4F34003765F2 /* WebViewViewController.swift in Sources */,
 				BF2768FD2A37D3F000FEC62A /* Like.swift in Sources */,
+				BFA5DF582A388857000C3073 /* ProfileViewControllerProtocol.swift in Sources */,
 				BFC245A629BD32A50055646C /* ProfileService.swift in Sources */,
 				BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */,
 				BF2CDFAD2A19F95600C70E44 /* Profile.swift in Sources */,
