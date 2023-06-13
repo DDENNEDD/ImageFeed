@@ -9,9 +9,11 @@ final class SingleImageViewController: UIViewController {
             setImage(url: imageURL)
         }
     }
+    
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private var imageView: UIImageView!
-    @IBAction private func didTapBackButton(_ sender: Any) {
+   
+    @IBAction func didTapBackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
