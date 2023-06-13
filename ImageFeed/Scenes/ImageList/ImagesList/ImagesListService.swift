@@ -30,7 +30,7 @@ final class ImagesListService {
         }
     }
 
-    private func changeLike (_ photoId: String)  {
+    private func changeLike (_ photoId: String) {
         if let index = photos.firstIndex(where: {$0.id == photoId}) {
             let photo = photos[index]
             let newPhoto = Photo(id: photo.id,
@@ -43,7 +43,7 @@ final class ImagesListService {
             photos[index] = newPhoto
         }
     }
-    
+
     func fetchPhotosNextPage() {
         nextPage += 1
         assert(Thread.isMainThread)

@@ -153,19 +153,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-bo-cBa">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
                                         <color key="backgroundColor" name="Black"/>
                                         <color key="tintColor" name="White"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dI4-bo-cBa" firstAttribute="leading" secondItem="e7e-Zq-ub7" secondAttribute="leading" id="L75-wi-Chx"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="bottom" secondItem="e7e-Zq-ub7" secondAttribute="bottom" id="QL0-jd-idw"/>
                                     <constraint firstItem="dI4-bo-cBa" firstAttribute="top" secondItem="e7e-Zq-ub7" secondAttribute="top" id="eQ8-8O-gyV"/>
                                     <constraint firstAttribute="bottom" secondItem="dI4-bo-cBa" secondAttribute="bottom" id="jSl-mu-Oyp"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="centerY" secondItem="e7e-Zq-ub7" secondAttribute="centerY" id="lT6-Rd-TiD"/>
                                     <constraint firstAttribute="trailing" secondItem="dI4-bo-cBa" secondAttribute="trailing" id="rJh-Jz-ZMQ"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="centerX" secondItem="e7e-Zq-ub7" secondAttribute="centerX" id="vsE-6S-3AV"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="V5w-SC-RRc"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ahz-Gj-mlH"/>
