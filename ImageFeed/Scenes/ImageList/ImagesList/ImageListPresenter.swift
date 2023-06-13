@@ -1,13 +1,5 @@
 import Foundation
 
-protocol ImageListPresenterProtocol {
-    var view: ImagesListViewControllerProtocol? { get set }
-    var imagesListService: ImagesListService { get }
-    func fetchPhotosNextPage()
-    func chekFilledList(_ indexPath: IndexPath)
-    func setLike(photoId: String, isLike: Bool, _ completion: @escaping (Result<Void, Error>) -> Void)
-}
-
 final class ImageListPresenter: ImageListPresenterProtocol {
     var view: ImagesListViewControllerProtocol?
     var imagesListService = ImagesListService.shared
@@ -24,7 +16,7 @@ final class ImageListPresenter: ImageListPresenterProtocol {
 
     func setLike(photoId: String, isLike: Bool, _ completion: @escaping (Result<Void, Error>) -> Void) {
         imagesListService.changeLike(photoId: photoId, isLike: isLike, { result in
-            switch result{
+            switch result {
             case .success(_):
                 completion(.success(()))
             case .failure(let error):

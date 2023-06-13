@@ -1,8 +1,9 @@
-//
-//  ImageListPresenterProtocol.swift
-//  ImageFeed
-//
-//  Created by Денис Беляков on 13.06.2023.
-//
-
 import Foundation
+
+protocol ImageListPresenterProtocol {
+    var view: ImagesListViewControllerProtocol? { get set }
+    var imagesListService: ImagesListService { get }
+    func fetchPhotosNextPage()
+    func chekFilledList(_ indexPath: IndexPath)
+    func setLike(photoId: String, isLike: Bool, _ completion: @escaping (Result<Void, Error>) -> Void)
+}
