@@ -9,7 +9,7 @@ class ProfileService {
 
     private func convertToProfile(_ profileResult: ProfileResult) -> Profile {
         Profile(userName: profileResult.userName,
-                name: "\(profileResult.firstName) \(profileResult.lastName)",
+                name: "\(profileResult.firstName) \(profileResult.lastName ?? "")",
                 loginName: "@\(profileResult.userName)",
                 bio: profileResult.bio ?? "")
     }
