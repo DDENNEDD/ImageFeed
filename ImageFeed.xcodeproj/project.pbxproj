@@ -39,6 +39,9 @@
 		BF6AFD6A2A3FB61F0086C7E8 /* ProfilePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AFD692A3FB61F0086C7E8 /* ProfilePresenterSpy.swift */; };
 		BF6AFD722A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AFD712A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift */; };
 		BF8656852A3FCDBD009B0EF5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656842A3FCDBD009B0EF5 /* Auth.swift */; };
+		BF8656882A3FCF51009B0EF5 /* ImageListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656872A3FCF51009B0EF5 /* ImageListTests.swift */; };
+		BF86568A2A3FCF99009B0EF5 /* ImageListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656892A3FCF99009B0EF5 /* ImageListViewControllerSpy.swift */; };
+		BF86568C2A3FD005009B0EF5 /* ImageListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86568B2A3FD005009B0EF5 /* ImageListPresenterSpy.swift */; };
 		BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9399502996ACEC006115E4 /* ProfileViewController.swift */; };
 		BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93995229995446006115E4 /* SingleImageViewController.swift */; };
 		BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97447129AE487300BB09DB /* AuthViewController.swift */; };
@@ -111,6 +114,9 @@
 		BF6AFD702A3FBDE70086C7E8 /* ImageFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageFeed.xctestplan; sourceTree = "<group>"; };
 		BF6AFD712A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		BF8656842A3FCDBD009B0EF5 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		BF8656872A3FCF51009B0EF5 /* ImageListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListTests.swift; sourceTree = "<group>"; };
+		BF8656892A3FCF99009B0EF5 /* ImageListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewControllerSpy.swift; sourceTree = "<group>"; };
+		BF86568B2A3FD005009B0EF5 /* ImageListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenterSpy.swift; sourceTree = "<group>"; };
 		BF9399502996ACEC006115E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF93995229995446006115E4 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		BF97447129AE487300BB09DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 		BF12F78429798B4600DDF1DA /* ImageFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF8656862A3FCF06009B0EF5 /* ImageListTest */,
 				BF6AFD642A3FB5B50086C7E8 /* ProfileTests */,
 			);
 			path = ImageFeedTests;
@@ -238,6 +245,16 @@
 				BF6AFD692A3FB61F0086C7E8 /* ProfilePresenterSpy.swift */,
 			);
 			path = ProfileTests;
+			sourceTree = "<group>";
+		};
+		BF8656862A3FCF06009B0EF5 /* ImageListTest */ = {
+			isa = PBXGroup;
+			children = (
+				BF8656872A3FCF51009B0EF5 /* ImageListTests.swift */,
+				BF8656892A3FCF99009B0EF5 /* ImageListViewControllerSpy.swift */,
+				BF86568B2A3FD005009B0EF5 /* ImageListPresenterSpy.swift */,
+			);
+			path = ImageListTest;
 			sourceTree = "<group>";
 		};
 		BF936B93297F61B500C2124F /* Presentation */ = {
@@ -555,6 +572,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6AFD6A2A3FB61F0086C7E8 /* ProfilePresenterSpy.swift in Sources */,
+				BF86568C2A3FD005009B0EF5 /* ImageListPresenterSpy.swift in Sources */,
+				BF8656882A3FCF51009B0EF5 /* ImageListTests.swift in Sources */,
+				BF86568A2A3FCF99009B0EF5 /* ImageListViewControllerSpy.swift in Sources */,
 				BF6AFD662A3FB5CF0086C7E8 /* ProfileTests.swift in Sources */,
 				BF6AFD682A3FB5F80086C7E8 /* ProfileViewControllerSpy.swift in Sources */,
 			);
