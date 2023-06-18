@@ -1,13 +1,5 @@
 import UIKit
 
-protocol ProfilePresenterProtocol {
-    var view: ProfileViewControllerProtocol? { get set }
-    func exit()
-    func setUserProfileUI()
-    func getUrlForProfileImage() -> URL?
-    var profileService: ProfileService { get }
-}
-
 final class ProfilePresenter: ProfilePresenterProtocol {
     var view: ProfileViewControllerProtocol?
     private let oAuth2TokenStorage = OAuth2TokenStorage()

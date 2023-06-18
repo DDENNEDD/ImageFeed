@@ -8,10 +8,10 @@ class ProfileService {
     private (set) var profile: Profile?
 
     private func convertToProfile(_ profileResult: ProfileResult) -> Profile {
-        return Profile(userName: profileResult.userName,
-                       name: "\(profileResult.firstName) \(profileResult.lastName)",
-                       loginName: "@\(profileResult.userName)",
-                       bio: profileResult.bio ?? "")
+        Profile(userName: profileResult.userName,
+                name: "\(profileResult.firstName) \(profileResult.lastName ?? "")",
+                loginName: "@\(profileResult.userName)",
+                bio: profileResult.bio ?? "")
     }
 
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void) {

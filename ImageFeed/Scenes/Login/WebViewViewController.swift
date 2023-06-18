@@ -31,7 +31,7 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        .darkContent
     }
 
     @IBAction private func didTapeBackButton(_ sender: Any?) {

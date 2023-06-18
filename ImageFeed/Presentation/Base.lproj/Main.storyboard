@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -71,6 +71,9 @@
                                                     <rect key="frame" x="337" y="16" width="30" height="26"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="LikeButtonOff"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClicked:" destination="BIc-7B-fh8" eventType="touchUpInside" id="LQn-e8-bSi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -150,19 +153,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-bo-cBa">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
                                         <color key="backgroundColor" name="Black"/>
                                         <color key="tintColor" name="White"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dI4-bo-cBa" firstAttribute="leading" secondItem="e7e-Zq-ub7" secondAttribute="leading" id="L75-wi-Chx"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="bottom" secondItem="e7e-Zq-ub7" secondAttribute="bottom" id="QL0-jd-idw"/>
                                     <constraint firstItem="dI4-bo-cBa" firstAttribute="top" secondItem="e7e-Zq-ub7" secondAttribute="top" id="eQ8-8O-gyV"/>
                                     <constraint firstAttribute="bottom" secondItem="dI4-bo-cBa" secondAttribute="bottom" id="jSl-mu-Oyp"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="centerY" secondItem="e7e-Zq-ub7" secondAttribute="centerY" id="lT6-Rd-TiD"/>
                                     <constraint firstAttribute="trailing" secondItem="dI4-bo-cBa" secondAttribute="trailing" id="rJh-Jz-ZMQ"/>
-                                    <constraint firstItem="dI4-bo-cBa" firstAttribute="centerX" secondItem="e7e-Zq-ub7" secondAttribute="centerX" id="vsE-6S-3AV"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="V5w-SC-RRc"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ahz-Gj-mlH"/>
@@ -179,7 +179,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="NavigationBackButton"/>
                                 <connections>
-                                    <action selector="didTapBackButton" destination="yPw-La-6E3" eventType="touchUpInside" id="U18-eN-IL3"/>
+                                    <action selector="didTapBackButton:" destination="yPw-La-6E3" eventType="touchUpInside" id="PxQ-vt-15k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-oE-RBJ" userLabel="SharingButton">
