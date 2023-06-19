@@ -58,6 +58,7 @@
 		BFC245A829BE73F50055646C /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */; };
 		BFC245AB29BE84220055646C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFC245AA29BE84220055646C /* Kingfisher */; };
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
+		BFC775BF2A40EADA00714737 /* WebViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
 		BFD9EA672A1D2D6D008386E6 /* ImagesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */; };
 		BFDCA48629EDEECB00B59411 /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */; };
@@ -138,6 +139,7 @@
 		BFC245A529BD32A50055646C /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
 		BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListService.swift; sourceTree = "<group>"; };
 		BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				BF6AFD712A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift */,
 				BF8656962A40E74C009B0EF5 /* WebViewViewControllerProtocol.swift */,
 				BF8656982A40E836009B0EF5 /* WebViewViewControllerDelegateProtocol.swift */,
+				BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				BF2CDFA32A19CE0100C70E44 /* AuthHelper.swift in Sources */,
 				BF2769012A37D74A00FEC62A /* ImageListPresenter.swift in Sources */,
 				BF2CDF972A19B35000C70E44 /* NetworkClient.swift in Sources */,
+				BFC775BF2A40EADA00714737 /* WebViewPresenterProtocol.swift in Sources */,
 				BF12F77329798B4500DDF1DA /* ImagesListViewController.swift in Sources */,
 				BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */,
 				BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */,
