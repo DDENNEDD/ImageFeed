@@ -11,17 +11,22 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
     @IBOutlet private var progressView: UIProgressView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter?.viewDidLoad()
-        webView.navigationDelegate = self
-        webView.accessibilityIdentifier = "UnsplashWebView"
-        estimatedProgressObservation = webView.observe(\.estimatedProgress,
-                                                        options: [],
-                                                        changeHandler: { [weak self] _, _ in
-            guard let self = self else { return }
-            self.presenter?.didUpdateProgressValue(self.webView.estimatedProgress)
-        })
-    }
+           super.viewDidLoad()
+           configureWebView()
+           presenter?.viewDidLoad()
+       }
+
+       private func configureWebView() {
+           webView.navigationDelegate = self
+           webView.accessibilityIdentifier = "UnsplashWebView"
+           estimatedProgressObservation = webView.observe(\.estimatedProgress, options: []) { [weak self] _, _ in
+               self?.handleEstimatedProgressUpdate()
+           }
+       }
+
+    private func handleEstimatedProgressUpdate() {
+           presenter?.didUpdateProgressValue(webView.estimatedProgress)
+       }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent
