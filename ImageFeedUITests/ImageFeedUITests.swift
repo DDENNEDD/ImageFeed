@@ -1,7 +1,7 @@
 import XCTest
 
 final class ImageFeedUITests: XCTestCase {
-    private let constants = ProfileConstants()
+    static let constants = ProfileConstants()
     private let app = XCUIApplication()
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -15,12 +15,12 @@ final class ImageFeedUITests: XCTestCase {
         let loginTextField = webView.descendants(matching: .textField).element
         XCTAssertTrue(loginTextField.waitForExistence(timeout: 20))
         loginTextField.tap()
-        loginTextField.typeText(constants.login)
+        loginTextField.typeText(ImageFeedUITests.constants.login)
         XCUIApplication().toolbars.buttons["Done"].tap()
         let passwordTextField = webView.descendants(matching: .secureTextField).element
         XCTAssertTrue(passwordTextField.waitForExistence(timeout: 7))
         passwordTextField.tap()
-        passwordTextField.typeText(constants.password)
+        passwordTextField.typeText(ImageFeedUITests.constants.password)
         webView.swipeUp()
         let webViewsQuery = app.webViews
         webViewsQuery.buttons["Login"].tap()
@@ -57,8 +57,8 @@ final class ImageFeedUITests: XCTestCase {
     func testProfile() throws {
         sleep(3)
         app.tabBars.buttons.element(boundBy: 1).tap()
-        XCTAssertTrue(app.staticTexts[constants.name].exists)
-        XCTAssertTrue(app.staticTexts[constants.loginName].exists)
+        XCTAssertTrue(app.staticTexts[ImageFeedUITests.constants.name].exists)
+        XCTAssertTrue(app.staticTexts[ImageFeedUITests.constants.loginName].exists)
         app.buttons["logoutButton"].tap()
         sleep(1)
         app.alerts["exit"].scrollViews.otherElements.buttons["Да"].tap()
