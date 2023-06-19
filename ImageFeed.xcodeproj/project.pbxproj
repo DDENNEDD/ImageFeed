@@ -18,7 +18,7 @@
 		BF12F79229798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */; };
 		BF2768FD2A37D3F000FEC62A /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2768FC2A37D3F000FEC62A /* Like.swift */; };
 		BF2769012A37D74A00FEC62A /* ImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2769002A37D74A00FEC62A /* ImageListPresenter.swift */; };
-		BF2769032A387F4F00FEC62A /* ImageListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2769022A387F4F00FEC62A /* ImageListViewControllerProtocol.swift */; };
+		BF2769032A387F4F00FEC62A /* ImagesListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2769022A387F4F00FEC62A /* ImagesListViewControllerProtocol.swift */; };
 		BF2769052A387F9A00FEC62A /* ImageListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2769042A387F9A00FEC62A /* ImageListCellProtocol.swift */; };
 		BF2CDF972A19B35000C70E44 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDF962A19B35000C70E44 /* NetworkClient.swift */; };
 		BF2CDFA12A19CDD100C70E44 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */; };
@@ -100,7 +100,7 @@
 		BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF2768FC2A37D3F000FEC62A /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		BF2769002A37D74A00FEC62A /* ImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenter.swift; sourceTree = "<group>"; };
-		BF2769022A387F4F00FEC62A /* ImageListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		BF2769022A387F4F00FEC62A /* ImagesListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		BF2769042A387F9A00FEC62A /* ImageListCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCellProtocol.swift; sourceTree = "<group>"; };
 		BF2CDF962A19B35000C70E44 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
@@ -235,12 +235,12 @@
 			isa = PBXGroup;
 			children = (
 				BF564266299464C00078DD4C /* ImagesListCell.swift */,
-				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
-				BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */,
-				BF2769002A37D74A00FEC62A /* ImageListPresenter.swift */,
-				BF2769022A387F4F00FEC62A /* ImageListViewControllerProtocol.swift */,
 				BF2769042A387F9A00FEC62A /* ImageListCellProtocol.swift */,
+				BF12F77229798B4500DDF1DA /* ImagesListViewController.swift */,
+				BF2769022A387F4F00FEC62A /* ImagesListViewControllerProtocol.swift */,
+				BF2769002A37D74A00FEC62A /* ImageListPresenter.swift */,
 				BFA5DF5B2A388DF7000C3073 /* ImageListPresenterProtocol.swift */,
+				BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -365,8 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				BF9399502996ACEC006115E4 /* ProfileViewController.swift */,
-				BF2CDFA82A19DCAD00C70E44 /* ProfilePresenter.swift */,
 				BFA5DF572A388857000C3073 /* ProfileViewControllerProtocol.swift */,
+				BF2CDFA82A19DCAD00C70E44 /* ProfilePresenter.swift */,
 				BFA5DF592A3888A9000C3073 /* ProfilePresenterProtocol.swift */,
 			);
 			path = Profile;
@@ -563,7 +563,7 @@
 				BF6AFD722A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift in Sources */,
 				BFA5DF5A2A3888A9000C3073 /* ProfilePresenterProtocol.swift in Sources */,
 				BF2CDFB12A19F9D700C70E44 /* URLs.swift in Sources */,
-				BF2769032A387F4F00FEC62A /* ImageListViewControllerProtocol.swift in Sources */,
+				BF2769032A387F4F00FEC62A /* ImagesListViewControllerProtocol.swift in Sources */,
 				BF2CDFAF2A19F9A000C70E44 /* Photo.swift in Sources */,
 				BF10AD8229AE4F34003765F2 /* WebViewViewController.swift in Sources */,
 				BF8656852A3FCDBD009B0EF5 /* Auth.swift in Sources */,
