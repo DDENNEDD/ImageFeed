@@ -305,10 +305,10 @@
 		BFDCA47D29EDEABB00B59411 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF2CDF962A19B35000C70E44 /* NetworkClient.swift */,
 				BF60617129B3F2E000070B98 /* OAuth2Service.swift */,
 				BF60617329B3F4CC00070B98 /* OAuth2TokenStorage.swift */,
 				BFC245A529BD32A50055646C /* ProfileService.swift */,
-				BF2CDF962A19B35000C70E44 /* NetworkClient.swift */,
 				BF2CDFA62A19DAA000C70E44 /* ProfileImageService.swift */,
 			);
 			path = Services;
@@ -352,11 +352,11 @@
 		BFDCA48129EDEC2100B59411 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF8656842A3FCDBD009B0EF5 /* Auth.swift */,
+				BF2768FC2A37D3F000FEC62A /* Like.swift */,
 				BF2CDFAC2A19F95600C70E44 /* Profile.swift */,
 				BF2CDFAE2A19F9A000C70E44 /* Photo.swift */,
 				BF2CDFB02A19F9D700C70E44 /* URLs.swift */,
-				BF2768FC2A37D3F000FEC62A /* Like.swift */,
-				BF8656842A3FCDBD009B0EF5 /* Auth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
