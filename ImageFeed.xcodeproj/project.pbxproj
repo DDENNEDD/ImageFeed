@@ -59,6 +59,7 @@
 		BFC245AB29BE84220055646C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFC245AA29BE84220055646C /* Kingfisher */; };
 		BFC3CCBF29B41392008D0733 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3CCBE29B41392008D0733 /* SplashViewController.swift */; };
 		BFC775BF2A40EADA00714737 /* WebViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */; };
+		BFC775C12A40F0BB00714737 /* AuthHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC775C02A40F0BB00714737 /* AuthHelperProtocol.swift */; };
 		BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */; };
 		BFD9EA672A1D2D6D008386E6 /* ImagesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */; };
 		BFDCA48629EDEECB00B59411 /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */; };
@@ -140,6 +141,7 @@
 		BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		BFC3CCBE29B41392008D0733 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		BFC775C02A40F0BB00714737 /* AuthHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelperProtocol.swift; sourceTree = "<group>"; };
 		BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extenshions.swift"; sourceTree = "<group>"; };
 		BFD9EA662A1D2D6D008386E6 /* ImagesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListService.swift; sourceTree = "<group>"; };
 		BFDCA48529EDEECB00B59411 /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -385,10 +387,11 @@
 		BFDCA48429EDEDF000B59411 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BF2CDFA42A19CE4900C70E44 /* AuthConstants.swift */,
 				BF2CDFA22A19CE0100C70E44 /* AuthHelper.swift */,
+				BFC775C02A40F0BB00714737 /* AuthHelperProtocol.swift */,
 				BFD90FE82984AE1800889E4D /* UIColors+Extenshions.swift */,
 				BFC245A729BE73F50055646C /* UIBlockingProgressHUD.swift */,
-				BF2CDFA42A19CE4900C70E44 /* AuthConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */,
 				BF2CDFAD2A19F95600C70E44 /* Profile.swift in Sources */,
 				BF60617229B3F2E000070B98 /* OAuth2Service.swift in Sources */,
+				BFC775C12A40F0BB00714737 /* AuthHelperProtocol.swift in Sources */,
 				BF8656992A40E836009B0EF5 /* WebViewViewControllerDelegateProtocol.swift in Sources */,
 				BFD90FE92984AE1800889E4D /* UIColors+Extenshions.swift in Sources */,
 				BF2CDFA32A19CE0100C70E44 /* AuthHelper.swift in Sources */,
