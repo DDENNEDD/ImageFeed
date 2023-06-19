@@ -1,10 +1,7 @@
 import XCTest
 
 final class ImageFeedUITests: XCTestCase {
-    private let login = "ddennedd@gmail.com"
-    private let password = "1029QPwo"
-    private let userName = "Den"
-    private let userContact = "Morano"
+    private let constants = ProfileConstants()
     private let app = XCUIApplication()
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -18,12 +15,12 @@ final class ImageFeedUITests: XCTestCase {
         let loginTextField = webView.descendants(matching: .textField).element
         XCTAssertTrue(loginTextField.waitForExistence(timeout: 20))
         loginTextField.tap()
-        loginTextField.typeText(login)
+        loginTextField.typeText(constants.login)
         XCUIApplication().toolbars.buttons["Done"].tap()
         let passwordTextField = webView.descendants(matching: .secureTextField).element
         XCTAssertTrue(passwordTextField.waitForExistence(timeout: 7))
         passwordTextField.tap()
-        passwordTextField.typeText(password)
+        passwordTextField.typeText(constants.password)
         webView.swipeUp()
         let webViewsQuery = app.webViews
         webViewsQuery.buttons["Login"].tap()
@@ -34,30 +31,38 @@ final class ImageFeedUITests: XCTestCase {
 
     func testFeed() throws {
         let tablesQuery = app.tables
-        let cell = tablesQuery.children(matching: .cell).element(boundBy: 0)
-        XCTAssertTrue(cell.waitForExistence(timeout: 5))
-        cell.swipeUp()
-        let cellToLike = tablesQuery.children(matching: .cell).element(boundBy: 1)
-        cellToLike.buttons["likeButton"].tap()
-        cellToLike.buttons["likeButton"].tap()
-        cellToLike.waitForExistence(timeout: 5)
-        cellToLike.tap()
-        cellToLike.waitForExistence(timeout: 5)
-        let image = app.scrollViews.images.element(boundBy: 0)
-        image.pinch(withScale: 3, velocity: 1)
-        image.pinch(withScale: 0.5, velocity: -1)
-        app.buttons["backButton"].tap()
-        XCTAssertTrue(cell.waitForExistence(timeout: 5))
+               let cellToLike = tablesQuery.children(matching: .cell).element(boundBy: 0)
+               let buttonLike = cellToLike.buttons["likeButton"]
+               buttonLike.tap()
+               sleep(2)
+               XCTAssertTrue(cellToLike.buttons["LikeButtonOn"].exists)
+               buttonLike.tap()
+               sleep(2)
+               XCTAssertTrue(cellToLike.buttons["LikeButtonOff"].exists)
+               cellToLike.swipeUp()
+               sleep(2)
+               let cellToSingleImage = tablesQuery.children(matching: .cell).element(boundBy: 0)
+               sleep(2)
+               cellToSingleImage.tap()
+               sleep(2)
+               let image = app.scrollViews.images.element(boundBy: 0)
+               image.pinch(withScale: 3, velocity: 1)
+               image.pinch(withScale: 0.5, velocity: -1)
+               let navBackButtonWhiteButton = app.buttons["backButton"]
+               navBackButtonWhiteButton.tap()
+               sleep(2)
+               XCTAssertTrue(cellToSingleImage.exists)
     }
 
     func testProfile() throws {
         sleep(3)
         app.tabBars.buttons.element(boundBy: 1).tap()
-        XCTAssertTrue(app.staticTexts["\(userName)"].exists)
-        XCTAssertTrue(app.staticTexts["\(userContact)"].exists)
+        XCTAssertTrue(app.staticTexts[constants.name].exists)
+        XCTAssertTrue(app.staticTexts[constants.loginName].exists)
         app.buttons["logoutButton"].tap()
         sleep(1)
         app.alerts["exit"].scrollViews.otherElements.buttons["Да"].tap()
+        sleep(2)
         XCTAssertTrue(app.buttons["Authenticate"].exists)
     }
 }

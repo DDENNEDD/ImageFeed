@@ -45,6 +45,7 @@
 		BF86568F2A3FD149009B0EF5 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86568E2A3FD149009B0EF5 /* WebViewTests.swift */; };
 		BF8656912A3FD16F009B0EF5 /* WebViewPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656902A3FD16F009B0EF5 /* WebViewPresenterSpy.swift */; };
 		BF8656932A3FD19C009B0EF5 /* WebViewViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656922A3FD19C009B0EF5 /* WebViewViewControllerSpy.swift */; };
+		BF8656952A3FE19A009B0EF5 /* ProfileTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8656942A3FE19A009B0EF5 /* ProfileTestConstants.swift */; };
 		BF9399512996ACEC006115E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9399502996ACEC006115E4 /* ProfileViewController.swift */; };
 		BF93995329995446006115E4 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93995229995446006115E4 /* SingleImageViewController.swift */; };
 		BF97447229AE487300BB09DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97447129AE487300BB09DB /* AuthViewController.swift */; };
@@ -123,6 +124,7 @@
 		BF86568E2A3FD149009B0EF5 /* WebViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
 		BF8656902A3FD16F009B0EF5 /* WebViewPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenterSpy.swift; sourceTree = "<group>"; };
 		BF8656922A3FD19C009B0EF5 /* WebViewViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewControllerSpy.swift; sourceTree = "<group>"; };
+		BF8656942A3FE19A009B0EF5 /* ProfileTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTestConstants.swift; sourceTree = "<group>"; };
 		BF9399502996ACEC006115E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF93995229995446006115E4 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		BF97447129AE487300BB09DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				BF12F78F29798B4600DDF1DA /* ImageFeedUITests.swift */,
 				BF12F79129798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift */,
+				BF8656942A3FE19A009B0EF5 /* ProfileTestConstants.swift */,
 			);
 			path = ImageFeedUITests;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF12F79229798B4600DDF1DA /* ImageFeedUITestsLaunchTests.swift in Sources */,
+				BF8656952A3FE19A009B0EF5 /* ProfileTestConstants.swift in Sources */,
 				BF12F79029798B4600DDF1DA /* ImageFeedUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
