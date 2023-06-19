@@ -1,7 +1,7 @@
 import Foundation
 
-let unsplashAccessKey = "WO_3W1D81z4c4MlX09e_Q7gGLV0sB-tYTnKfozhzlig"
-let unsplashSecretKey = "GokulK15gaiE4tvoN_HtqS49gJrTOEcQTy3rM-dg-nQ"
+let unsplashAccessKey = "b6CX1RCFR51uWh3lf369p6iPaE8y81Dzvy-_a9m2eNI"
+let unsplashSecretKey = "4iwE1TjomLp3InJoIZj2LvlOv-0Hq96VSbn_bvJy-kQ"
 let unsplashRedirectURI = "urn:ietf:wg:oauth:2.0:oob"
 let unsplashAccessScope = "public+read_user+write_likes"
 let profilePath = "me"
