@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -49,7 +48,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="493"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="boK-5W-x8r" userLabel="Cell Image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="boK-5W-x8r" userLabel="Cell Image">
                                                     <rect key="frame" x="16" y="4" width="361" height="485"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" name="White"/>
@@ -69,8 +68,9 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-3r-XdT" userLabel="Like Button">
                                                     <rect key="frame" x="337" y="16" width="30" height="26"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="likeButton"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="LikeButtonOff"/>
+                                                    <state key="normal" image="LikeButtonOn"/>
                                                     <connections>
                                                         <action selector="likeButtonClicked:" destination="BIc-7B-fh8" eventType="touchUpInside" id="LQn-e8-bSi"/>
                                                     </connections>
@@ -172,6 +172,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-OM-FXa" userLabel="NavigationButton">
                                 <rect key="frame" x="16" y="60" width="48" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="CxF-g3-8KU"/>
                                     <constraint firstAttribute="height" constant="48" id="SQp-fa-IyM"/>
@@ -239,7 +240,7 @@
             <objects>
                 <viewController storyboardIdentifier="WebViewViewController" id="Rf6-3M-Xev" userLabel="WebViewViewController" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eE8-oI-7gy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEw-bG-yR8">
@@ -263,7 +264,7 @@
                                     <color key="titleColor" name="Black"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapeBackButton:" destination="Rf6-3M-Xev" eventType="touchUpInside" id="IFS-t0-gZK"/>
+                                    <action selector="didTapBackButton:" destination="Rf6-3M-Xev" eventType="touchUpInside" id="IFS-t0-gZK"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AuF-Qh-8F5">
@@ -297,7 +298,7 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="LikeButtonOff" width="29.333333969116211" height="26"/>
+        <image name="LikeButtonOn" width="30" height="26"/>
         <image name="NavigationBackButton" width="9" height="15.666666984558105"/>
         <image name="NavigationBackButtonBlack" width="9" height="15.666666984558105"/>
         <image name="SharingButton" width="50" height="50"/>

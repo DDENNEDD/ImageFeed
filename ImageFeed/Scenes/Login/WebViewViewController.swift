@@ -1,13 +1,6 @@
 import UIKit
 import WebKit
 
-protocol WebViewViewControllerProtocol: AnyObject {
-    var presenter: WebViewPresenterProtocol? { get set }
-    func load(request: URLRequest)
-    func setProgressValue(_ newValue: Float)
-    func setProgressHidden(_ isHidden: Bool)
-}
-
 final class WebViewViewController: UIViewController, WebViewViewControllerProtocol {
 
     private var estimatedProgressObservation: NSKeyValueObservation?
@@ -18,23 +11,28 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
     @IBOutlet private var progressView: UIProgressView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter?.viewDidLoad()
-        webView.navigationDelegate = self
-        webView.accessibilityIdentifier = "UnsplashWebView"
-        estimatedProgressObservation = webView.observe(\.estimatedProgress,
-                                                        options: [],
-                                                        changeHandler: { [weak self] _, _ in
-            guard let self = self else { return }
-            self.presenter?.didUpdateProgressValue(self.webView.estimatedProgress)
-        })
-    }
+           super.viewDidLoad()
+           configureWebView()
+           presenter?.viewDidLoad()
+       }
+
+       private func configureWebView() {
+           webView.navigationDelegate = self
+           webView.accessibilityIdentifier = "UnsplashWebView"
+           estimatedProgressObservation = webView.observe(\.estimatedProgress, options: []) { [weak self] _, _ in
+               self?.handleEstimatedProgressUpdate()
+           }
+       }
+
+    private func handleEstimatedProgressUpdate() {
+           presenter?.didUpdateProgressValue(webView.estimatedProgress)
+       }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent
     }
 
-    @IBAction private func didTapeBackButton(_ sender: Any?) {
+    @IBAction private func didTapBackButton(_ sender: Any?) {
         delegate?.webViewViewControllerDidCancel(self)
     }
 
@@ -80,9 +78,4 @@ extension WebViewViewController: WKNavigationDelegate {
             return nil
         }
     }
-}
-
-protocol WebViewViewControllerDelegate: AnyObject {
-    func  webViewViewController(_ viewController: WebViewViewController, didAuthenticateWithCode code: String)
-    func webViewViewControllerDidCancel(_ viewController: WebViewViewController)
 }
