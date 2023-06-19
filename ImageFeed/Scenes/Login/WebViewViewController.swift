@@ -27,7 +27,7 @@ final class WebViewViewController: UIViewController, WebViewViewControllerProtoc
         .darkContent
     }
 
-    @IBAction private func didTapeBackButton(_ sender: Any?) {
+    @IBAction private func didTapBackButton(_ sender: Any?) {
         delegate?.webViewViewControllerDidCancel(self)
     }
 
