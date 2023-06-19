@@ -24,6 +24,7 @@ final class ImagesListService {
                               createdAt: date,
                               welcomeDescription: num.welcomeDescription,
                               thumbImageURL: num.urls.thumb,
+                              smallImageURL: num.urls.small,
                               largeImageURL: num.urls.full,
                               isLiked: num.isLiked)
             photos.append(photo)
@@ -38,6 +39,7 @@ final class ImagesListService {
                                  createdAt: photo.createdAt,
                                  welcomeDescription: photo.welcomeDescription,
                                  thumbImageURL: photo.thumbImageURL,
+                                 smallImageURL: photo.smallImageURL,
                                  largeImageURL: photo.largeImageURL,
                                  isLiked: !photo.isLiked)
             photos[index] = newPhoto
@@ -53,7 +55,8 @@ final class ImagesListService {
         if let token = oAuth2TokenStorage.token {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
-        let task = urlSession.objectTask(for: request, completion: {[weak self] (result: Result<[PhotoResult], Error>) in
+        let task = urlSession.objectTask(for: request,
+                                         completion: {[weak self] (result: Result<[PhotoResult], Error>) in
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 switch result {

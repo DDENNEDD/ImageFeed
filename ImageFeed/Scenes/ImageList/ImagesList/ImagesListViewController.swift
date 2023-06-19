@@ -44,7 +44,7 @@ final class ImagesListViewController: UIViewController {
     }
 
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
-        guard let url = URL(string: photos[indexPath.row].thumbImageURL) else { return }
+        guard let url = URL(string: photos[indexPath.row].smallImageURL) else { return }
         cell.cellImage.kf.setImage(with: url,
                                    placeholder: UIImage(named: "stub.png"),
                                    completionHandler: { [weak self] _ in
@@ -88,6 +88,7 @@ extension ImagesListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.selectionStyle = .none
         presenter?.chekFilledList(indexPath)
     }
 }

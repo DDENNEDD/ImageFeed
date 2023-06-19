@@ -22,9 +22,7 @@ final class AuthViewController: UIViewController {
         view.addSubview(button)
         authScreenLogo.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
-
         button.backgroundColor = .ypWhite
-
         button.tintColor = .ypWhite
         button.layer.cornerRadius = 16
         button.setTitleColor(.ypBlack, for: .normal)
@@ -59,14 +57,12 @@ final class AuthViewController: UIViewController {
 }
 
 extension AuthViewController: WebViewViewControllerDelegate {
+
     func webViewViewController(_ viewController: WebViewViewController, didAuthenticateWithCode code: String) {
         delegate?.authViewController(self, didAuthenticateWithCode: code)
     }
+
     func webViewViewControllerDidCancel(_ viewController: WebViewViewController) {
         viewController.dismiss(animated: true)
     }
-}
-
-protocol AuthViewControllerDelegate: AnyObject {
-    func authViewController(_ viewController: AuthViewController, didAuthenticateWithCode code: String)
 }
