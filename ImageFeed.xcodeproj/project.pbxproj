@@ -329,13 +329,13 @@
 			isa = PBXGroup;
 			children = (
 				BF97447129AE487300BB09DB /* AuthViewController.swift */,
-				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
-				BFC3CCBE29B41392008D0733 /* SplashViewController.swift */,
-				BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */,
 				BF6AFD712A3FC32F0086C7E8 /* AuthViewControllerDelegateProtocol.swift */,
+				BF10AD8129AE4F34003765F2 /* WebViewViewController.swift */,
 				BF8656962A40E74C009B0EF5 /* WebViewViewControllerProtocol.swift */,
-				BF8656982A40E836009B0EF5 /* WebViewViewControllerDelegateProtocol.swift */,
+				BF2CDFA02A19CDD100C70E44 /* WebViewPresenter.swift */,
 				BFC775BE2A40EADA00714737 /* WebViewPresenterProtocol.swift */,
+				BF8656982A40E836009B0EF5 /* WebViewViewControllerDelegateProtocol.swift */,
+				BFC3CCBE29B41392008D0733 /* SplashViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
