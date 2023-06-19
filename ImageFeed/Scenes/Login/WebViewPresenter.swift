@@ -1,7 +1,5 @@
 import Foundation
 
-
-
 final class WebViewPresenter: WebViewPresenterProtocol {
     var authHelper: AuthHelperProtocol
     init(authHelper: AuthHelperProtocol) {
